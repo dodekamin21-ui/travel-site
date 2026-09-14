@@ -1,0 +1,9 @@
+# Original photo library (kept locally, not published to GitHub Pages)
+/images-archive/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# MCP config (contains local machine-specific absolute paths)
+.mcp.json

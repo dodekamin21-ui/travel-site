@@ -1,0 +1,71 @@
+{
+  "slug": "2025-12-italy",
+  "title": "真冬のイタリア旅行(ローマ・ナポリ)",
+  "region": "ヨーロッパ",
+  "dateRange": { "start": "2025-12-18", "end": "2025-12-24" },
+  "archive": {
+    "root": "images-archive/2025-12-italy",
+    "folders": {
+      "camera": { "path": "images-archive/2025-12-italy/camera", "count": 365, "description": "スマホカメラ撮って出しの元写真(ファイル名=撮影日時 YYYYMMDD_HHMMSS.jpg)" },
+      "line": { "path": "images-archive/2025-12-italy/line", "count": 69, "description": "LINE経由で受信した写真(ファイル名=受信時刻のUnixミリ秒)" },
+      "other": { "path": "images-archive/2025-12-italy/other", "count": 2, "description": "SNSのスクリーンショットなど" }
+    },
+    "totalCount": 436,
+    "photosByDate": {
+      "2025-12-18": 34,
+      "2025-12-19": 136,
+      "2025-12-20": 104,
+      "2025-12-21": 92,
+      "2025-12-22": 46,
+      "2025-12-23": 12,
+      "2025-12-24": 10
+    },
+    "note": "このフォルダは.gitignoreによりGitHubにはpushされない非公開の原本保管庫。記事作成時はここから写真を選び、images/2025-12-italy/配下に圧縮版を書き出す。"
+  },
+  "publicImages": {
+    "root": "images/2025-12-italy",
+    "cover": { "path": "images/2025-12-italy/cover", "description": "トップページのカード・ヒーロー背景など、特定の記事に属さない代表カット(圧縮済み、長辺1920px/quality82)" },
+    "naples": { "path": "images/2025-12-italy/naples", "description": "articles/naples.html で使用する圧縮済み画像" }
+  },
+  "articles": [
+    {
+      "file": "articles/naples.html",
+      "date": "2025-12-19",
+      "title": "ローマから日帰り、ナポリを歩き尽くした一日。",
+      "status": "published",
+      "photos": [
+        { "time": "08:00", "file": "images/2025-12-italy/naples/20251219_075214.jpg", "archiveSource": "images-archive/2025-12-italy/camera/20251219_075214.jpg", "caption": "ホテルを出て、テルミニ駅へ" },
+        { "time": "09:30", "file": "images/2025-12-italy/naples/20251219_094433.jpg", "archiveSource": "images-archive/2025-12-italy/camera/20251219_094433.jpg", "caption": "ナポリ着、電車と徒歩で旧市街へ" },
+        { "time": "10:15", "file": "images/2025-12-italy/naples/20251219_102523.jpg", "archiveSource": "images-archive/2025-12-italy/camera/20251219_102523.jpg", "caption": "L'Antica Pizzeria da Micheleでピザ" },
+        { "time": "11:10", "file": "images/2025-12-italy/naples/20251219_113946.jpg", "archiveSource": "images-archive/2025-12-italy/camera/20251219_113946.jpg", "caption": "徒歩で街を散策、途中でジェラート" },
+        { "time": "11:30", "file": "images/2025-12-italy/naples/20251219_113159.jpg", "archiveSource": "images-archive/2025-12-italy/camera/20251219_113159.jpg", "caption": "マラドーナの壁画を見に" },
+        { "time": "12:00", "file": "images/2025-12-italy/naples/20251219_110804.jpg", "archiveSource": "images-archive/2025-12-italy/camera/20251219_110804.jpg", "caption": "ナポリの街中をさらに散策" },
+        { "time": "12:30", "file": "images/2025-12-italy/naples/20251219_134710.jpg", "archiveSource": "images-archive/2025-12-italy/camera/20251219_134710.jpg", "caption": "路上でレモンチェッロを一杯" },
+        { "time": "14:30", "file": "images/2025-12-italy/naples/20251219_144048.jpg", "archiveSource": "images-archive/2025-12-italy/camera/20251219_144048.jpg", "caption": "ケーブルカーのような乗り物で丘の上へ" },
+        { "time": "14:40", "file": "images/2025-12-italy/naples/20251219_145046.jpg", "archiveSource": "images-archive/2025-12-italy/camera/20251219_145046.jpg", "caption": "サンテルモ城からの大パノラマ(記事ヒーロー画像にも使用)" },
+        { "time": "16:30", "file": "images/2025-12-italy/naples/20251219_152212.jpg", "archiveSource": "images-archive/2025-12-italy/camera/20251219_152212.jpg", "caption": "夕暮れの街を徒歩で降りる" },
+        { "time": "18:00", "file": "images/2025-12-italy/naples/20251219_175901.jpg", "archiveSource": "images-archive/2025-12-italy/camera/20251219_175901.jpg", "caption": "ナポリ駅前で夕食" },
+        { "time": "21:00", "file": "images/2025-12-italy/naples/20251219_214411.jpg", "archiveSource": "images-archive/2025-12-italy/camera/20251219_214411.jpg", "caption": "ホテル着" },
+        { "time": "21:30", "file": "images/2025-12-italy/naples/20251219_210824.jpg", "archiveSource": "images-archive/2025-12-italy/camera/20251219_210824.jpg", "caption": "ホテル近くのスーパーへ" }
+      ]
+    }
+  ],
+  "homepageCards": {
+    "note": "index.html の注目の旅行記カード。articleがnullのものはまだ個別記事が未執筆(リンク先が#のまま)。",
+    "items": [
+      { "date": "2025-12-19", "title": "ローマ発、フレッチャロッサで巡る真冬のイタリア鉄道旅", "tag": "イタリア", "image": "images/2025-12-italy/naples/20251219_081137.jpg", "article": "articles/naples.html" },
+      { "date": "2025-12-20", "title": "夜のコロッセオ、ライトアップされた円形闘技場を歩く", "tag": "イタリア", "image": "images/2025-12-italy/cover/20251220_171039.jpg", "article": null },
+      { "date": "2025-12-20", "title": "下町の食堂で味わう、正統派カルボナーラとアマトリチャーナ", "tag": "グルメ", "image": "images/2025-12-italy/cover/20251220_133703.jpg", "article": null },
+      { "date": "2025-12-22", "title": "老舗パスティッチェリアで出会った焼きたてドーナツと伝統菓子", "tag": "グルメ", "image": "images/2025-12-italy/cover/20251222_110135.jpg", "article": null },
+      { "date": "2025-12-18", "title": "出発の朝、慌ただしい空港ターミナルから旅が始まる", "tag": "旅のはじまり", "image": "images/2025-12-italy/cover/20251218_120219.jpg", "article": null },
+      { "date": "2025-12-19", "title": "行列必至の老舗ピッツェリア、壁を埋め尽くす受賞歴の数々", "tag": "グルメ", "image": "images/2025-12-italy/naples/20251219_102523.jpg", "article": null }
+    ]
+  },
+  "sitewideUsage": [
+    { "file": "images/2025-12-italy/cover/20251221_143336.jpg", "usedIn": "css/style.css (.hero-bg)", "caption": "トップページのヒーロー背景" },
+    { "file": "images/2025-12-italy/cover/20251218_175914.jpg", "usedIn": "index.html (#about .about-photo)", "caption": "サイト概要セクションの写真" }
+  ],
+  "pendingAutomation": {
+    "note": "Claude Codeで記事を自動生成する際の参照先。日付ごとの元写真枚数(archive.photosByDate)を見て、まだ記事化されていない日(12/20 コロッセオ・グルメ、12/22 パスティッチェリア、12/18 出発、12/21、12/23、12/24 など)から写真を選定し、images/2025-12-italy/<記事slug>/ に圧縮版を書き出してarticles/配下に新規記事を作成する運用を想定。"
+  }
+}
