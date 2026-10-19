@@ -2141,3 +2141,49 @@ body.lightbox-open {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.85rem;
 }
+
+/* Trip basics (flight / hotel) */
+.basic-block + .basic-block {
+  margin-top: 18px;
+}
+
+.basic-block h4 {
+  margin: 0 0 8px;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
+}
+
+.basic-list {
+  display: grid;
+  grid-template-columns: 7.5em 1fr;
+  gap: 8px 14px;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.basic-list dt {
+  color: var(--color-text-soft);
+}
+
+.basic-list dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.basic-list a {
+  color: var(--color-accent-dark);
+  text-decoration: underline;
+}
+
+@media (max-width: 680px) {
+  .basic-list {
+    grid-template-columns: 1fr;
+    gap: 2px 0;
+  }
+
+  .basic-list dt {
+    margin-top: 8px;
+    font-size: 0.78rem;
+  }
+}
