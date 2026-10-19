@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ローマから日帰りでナポリへ。ピザとジョジョと絶景の一日。| 旅と、記録。</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../index.html#top" class="logo">旅と、記録。</a>
+    <nav class="nav" id="nav">
+      <a href="../index.html#featured">旅行記</a>
+      <a href="../index.html#destinations">エリアから探す</a>
+      <a href="../index.html#about">このサイトについて</a>
+      <a href="../index.html#contact">お問い合わせ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="article-hero">
+  <div class="article-hero-bg" style="background-image:url('../images/Italy01/naples/20251219_150623.jpg'); background-position:center 60%;"></div>
+  <div class="article-hero-content container">
+    <p class="article-eyebrow">NAPOLI, ONE DAY.</p>
+    <h1>ローマから<wbr>日帰りで<wbr>ナポリへ。<br>ピザと<wbr>ジョジョと<wbr>絶景の一日。</h1>
+    <div class="article-meta">
+      <span>2025.12.19</span>
+      <span>ローマ ⇄ ナポリ</span>
+      <span>日帰り旅行</span>
+    </div>
+  </div>
+</section>
+
+<p class="container article-breadcrumb"><a href="../index.html">トップ</a> ／ 旅行記 ／ ローマから日帰りでナポリへ。ピザとジョジョと絶景の一日</p>
+
+<section class="article-intro container">
+  <div class="article-prose">
+    <p>人生初のヨーロッパ旅行、その2日目です。ローマのホテルを出発し、イタリアの新幹線（高速列車）に乗って、ナポリまで日帰りで行ってきました。この日のテーマは、ピザ、ジョジョ、絶景の三本立て。すべて詰め込んだ結果、夜には足が棒のようになりましたが、まったく後悔はありません。朝から夜まで、時間の流れに沿って書いていきます。料金や地図も、わかる範囲で添えているので、行きたくなったら参考にしてください。</p>
+  </div>
+</section>
+
+<nav class="toc" aria-label="目次">
+  <p class="toc-title">目次</p>
+  <ol class="toc-list">
+      <li><a href="#tl-0750"><time>7:50</time><span>テルミニ駅から新幹線で</span></a></li>
+      <li><a href="#tl-0930"><time>9:30</time><span>ナポリ駅に到着</span></a></li>
+      <li><a href="#tl-1030"><time>10:30</time><span>ダ・ミケーレでピザ</span></a></li>
+      <li><a href="#tl-1100"><time>11:00</time><span>トリブナリ通りを散策</span></a></li>
+      <li><a href="#tl-1230"><time>12:30</time><span>サンタ・キアラ教会</span></a></li>
+      <li><a href="#tl-1330"><time>13:30</time><span>バーで休憩</span></a></li>
+      <li><a href="#tl-1420"><time>14:20</time><span>ケーブルカー</span></a></li>
+      <li><a href="#tl-1500"><time>15:00</time><span>サンテルモ城</span></a></li>
+      <li><a href="#tl-1630"><time>16:30</time><span>下山</span></a></li>
+      <li><a href="#tl-1730"><time>17:30</time><span>ディナー</span></a></li>
+      <li><a href="#tl-1900"><time>19:00</time><span>ローマへ帰る</span></a></li>
+      <li><a href="#tl-2100"><time>21:00</time><span>スーパーでお土産</span></a></li>
+  </ol>
+  <ul class="toc-more">
+    <li><a href="#map">地図と歩いた距離</a></li>
+    <li><a href="#journey">旅程の振り返り</a></li>
+    <li><a href="#info">料金・場所・お役立ち情報</a></li>
+  </ul>
+</nav>
+
+<div class="filter-bar" role="group" aria-label="絞り込み">
+  <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">すべて</button>
+  <button type="button" class="filter-btn" data-filter="meal" aria-pressed="false">食事</button>
+  <button type="button" class="filter-btn" data-filter="sight" aria-pressed="false">観光</button>
+  <button type="button" class="filter-btn" data-filter="move" aria-pressed="false">移動</button>
+  <button type="button" class="filter-btn" data-filter="shop" aria-pressed="false">買い物</button>
+  <p class="filter-status" hidden><span class="filter-status-text"></span><button type="button" class="filter-clear">解除</button></p>
+</div>
+
+<div class="chapter-marker"><span>12/19 — NAPOLI</span></div>
+
+<div class="timeline">
+
+  <div id="tl-0750" class="timeline-item timeline-item--feature" data-cat="move" data-tags="新幹線|遅延|omio">
+    <div class="timeline-time">7:50</div>
+    <div class="timeline-card">
+      <div class="timeline-photos">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_075513.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_075214.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--move">移動</span>
+        <button type="button" class="hashtag" data-tag="新幹線">#新幹線</button>
+        <button type="button" class="hashtag" data-tag="遅延">#遅延</button>
+        <button type="button" class="hashtag" data-tag="omio">#omio</button>
+      </div>
+      <h3>テルミニ駅から、人生初のイタリア新幹線</h3>
+      <div class="info-chips">
+        <span class="info-chip"><b>所要</b>約60分</span>
+        <span class="info-chip"><b>料金</b>1名 約50€（約9,000円）／2名で約100€（約18,000円）</span>
+      </div>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Italy01/naples/avatar-jojo-awe.svg" alt="">
+        <p class="voice-bubble">みんな鼻が高くてかっこいい</p>
+      </div>
+      <p>ホテルから駅までは徒歩で向かいました。切符の買い方は、前日に券売機を触って予習しておきました。券売機を操作していると、制服を着て帽子をかぶった鉄道会社の方が声をかけてくれました。イタリア語だったので会話はできませんでしたが、どうやら「このチケットの電車はあと5分で出発する予定だけれど、遅延しているので実際は20分後になる」と教えてくれていたようです。とてもありがたかったです。イタリア語が分からず、申し訳ありませんでした。</p>
+      <p>8:20ごろの列車に乗りました。向かいの席はイタリア人らしき方で、みんな鼻が高くてかっこいいです。ナポリまでは約60分でした。料金は2名で約100ユーロ、日本円にして約18,000円（1名あたり約50ユーロ、約9,000円。当時のレートは1ユーロ約180円）で、あとから調べて「かなり高い」と感じました。「omio」というアプリでヨーロッパの鉄道チケットを事前に見ていて、事前に買うことも考えていましたが、結局は券売機で買いました。日本と同じで、早く買うほど安くなるようです。詳しくは覚えていませんが、20〜30ユーロほどの差があったと思います。チケットは早めに購入するのがおすすめです。</p>
+      <div class="notes">
+        <p class="note note--warn"><b>注意</b>遅延することがあります。今回は、5分後の発車予定が20分後になりました</p>
+        <p class="note note--tip"><b>オススメ</b>早めに買うと安くなります（20〜30€ほどの差があったと思います）</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tl-0930" class="timeline-item timeline-item--feature" data-cat="move" data-tags="ナポリ駅散策|寿司屋|快晴">
+    <div class="timeline-time">9:30</div>
+    <div class="timeline-card">
+      <div class="timeline-photos timeline-photos--3">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_094433.jpg'); background-position:center 80%;"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_094336_f3.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_094236.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--move">到着</span>
+        <button type="button" class="hashtag" data-tag="ナポリ駅散策">#ナポリ駅散策</button>
+        <button type="button" class="hashtag" data-tag="寿司屋">#寿司屋</button>
+        <button type="button" class="hashtag" data-tag="快晴">#快晴</button>
+      </div>
+      <h3>ナポリ駅に到着。治安の不安より先に、寿司屋が目に入った</h3>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Italy01/naples/avatar-jojo-awe.svg" alt="">
+        <p class="voice-bubble">雲ひとつない空が、とてもきれいでした</p>
+      </div>
+      <p>ナポリは治安が悪いと聞いていたので、正直なところ少し不安でした。でも駅に降り立つと、雲ひとつない真っ青な空が広がっていました。不安だった自分が恥ずかしくなるくらいの快晴です。</p>
+      <p>駅の中には、SSCナポリのサッカーショップがあり、なぜか寿司屋まであります。ナポリで寿司とは意外でした。ローマのテルミニ駅ほど巨大ではありませんが、大きくてしっかりした駅です。</p>
+      <div class="notes">
+        <p class="note note--warn"><b>注意</b>治安が悪いと言われている地域</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tl-1030" class="timeline-item timeline-item--feature" data-cat="meal move" data-tags="ピザ|マルゲリータ|マリナーラ">
+    <div class="timeline-time">10:30</div>
+    <div class="timeline-card">
+      <div class="timeline-photos timeline-photos--3">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_102456.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_102757.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_102923.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--meal">食事</span>
+        <span class="cat-tag cat-tag--move">移動</span>
+        <button type="button" class="hashtag" data-tag="ピザ">#ピザ</button>
+        <button type="button" class="hashtag" data-tag="マルゲリータ">#マルゲリータ</button>
+        <button type="button" class="hashtag" data-tag="マリナーラ">#マリナーラ</button>
+      </div>
+      <h3>ダ・ミケーレ本店、顔より大きなピザに感動した</h3>
+      <div class="info-chips">
+        <span class="info-chip"><b>料金</b>マルゲリータ 6€（約1,000円）</span>
+        <span class="info-chip"><b>支払い</b>現金のみ</span>
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/place/L'Antica+Pizzeria+da+Michele/@40.8501774,14.2557102,16.83z/data=!3m1!5s0x133b083f8c37f599:0xae0ad3e3cb1579ac!4m6!3m5!1s0x133b083f8db6b079:0x5ab2972d7365b642!8m2!3d40.8497563!4d14.2633002!16s%2Fg%2F1tdbyxpz" target="_blank" rel="noopener"><b>地図</b>ダ・ミケーレ本店</a>
+      </div>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Italy01/naples/avatar-jojo-joy.svg" alt="">
+        <p class="voice-bubble">あー、おいしかった。最高です！</p>
+      </div>
+      <p>朝ごはんを食べていなかったので、ナポリといえばピザ、ということでダ・ミケーレへ向かいました。正式名称は「L'Antica Pizzeria da Michele（ラ・アンティーカ・ピッツェリア・ダ・ミケーレ）」で、ダ・ミケーレは略した呼び方です。歩いても行ける距離でしたが、せっかくなので地下鉄にも乗ってみました。券売機は英語の翻訳機能を使って操作し、切符を購入。Duomo駅まで、たった1駅です。駅を降りるとすぐにお店が見つかりました。朝の時間帯でしたが、人は意外と多く、それでもすぐに席に着けました。</p>
+      <p>メニューは、ピザが4種類ほどとドリンクだけです。イタリアのピザは「1人1枚」が基本と聞いていたので、そのとおりにマルゲリータとマリナーラを注文しました。ドリンクはコーラとスプライト。水さえ有料なので注意してください。テーブルの敷物や壁にメニューが書かれているので、注文は簡単です。注文から5〜10分ほどで運ばれてきたピザは、とにかく大きく、香りも素晴らしいものでした。</p>
+      <p>この店は日本にもあるので、事前に調べて、ナイフとフォークで食べると知っていました。生地が薄くて切りやすく、手も汚れないので、とても食べやすいです。チーズの質が素晴らしく、これまで食べたことのないもちもちとした食感で、味も抜群においしかったです。さすが本場です。マリナーラはトマトとニンニクがしっかり効いていて、こちらも食べやすい味でした。大きいサイズなので「1人1枚は大変かも」と思っていましたが、生地が薄いので、あっさり食べきれました。マルゲリータは6ユーロ（約1,000円）。この値段でこの味は、最高のコストパフォーマンスです。</p>
+      <p>ひとつだけ注意があります。この店は現金のみで、カードは使えませんでした。ピザとドリンクで、合計は18ユーロ。20ユーロ札を出して、2ユーロのおつりをもらうはずでした。ところが、店員さんに「チップ」と言われたので、そのまま渡しました。結局、2名で20ユーロ（約3,600円）でした。</p>
+      <div class="notes">
+        <p class="note note--warn"><b>注意</b>水も有料なので注意</p>
+        <p class="note note--warn"><b>注意</b>現金のみ。今回はおつりの2€を「チップ」と言われて渡した</p>
+        <p class="note note--tip"><b>オススメ</b>1人1枚が基本。ナイフとフォークで食べる</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tl-1100" class="timeline-item timeline-item--feature" data-cat="move sight" data-tags="散策|トリブナリ通り|マラドーナ">
+    <div class="timeline-time">11:00</div>
+    <div class="timeline-card">
+      <div class="timeline-photos timeline-photos--3">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_111455.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_114815_show.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_113159.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--sight">観光</span>
+        <span class="cat-tag cat-tag--move">移動</span>
+        <button type="button" class="hashtag" data-tag="散策">#散策</button>
+        <button type="button" class="hashtag" data-tag="トリブナリ通り">#トリブナリ通り</button>
+        <button type="button" class="hashtag" data-tag="マラドーナ">#マラドーナ</button>
+      </div>
+      <h3>トリブナリ通りを散策。街じゅうがマラドーナだらけ</h3>
+      <div class="info-chips">
+        <span class="info-chip"><b>散策</b>13:30頃まで</span>
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/place/Via+dei+Tribunali,+Napoli+NA,+%E3%82%A4%E3%82%BF%E3%83%AA%E3%82%A2/@40.8506678,14.2574018,17.39z/data=!4m6!3m5!1s0x133b0841dbfc5987:0xf7000059136aa614!8m2!3d40.8515175!4d14.2588326!16s%2Fm%2F025y884" target="_blank" rel="noopener"><b>地図</b>トリブナリ通り</a>
+      </div>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Italy01/naples/avatar-jojo-smile.svg" alt="">
+        <p class="voice-bubble">これでもかというくらい、街中にマラドーナの壁画があります</p>
+      </div>
+      <p>ここからは13:30ごろまで、ひたすら街歩きです。トリブナリ通りからサンタ・キアラ教会を経由して、ケーブルカーのモンテサント駅まで歩きました。トリブナリ通りは観光客も地元の人も多くてにぎやかで、地元の方なのか、バルコニーからショーのように歌っている人までいました。</p>
+      <p>そして、街中にはこれでもかというくらいマラドーナの壁画があります。どこを向いてもマラドーナです。雑貨屋さんをのぞいたりしながら歩きました。</p>
+    </div>
+  </div>
+
+  <div id="tl-1230" class="timeline-item timeline-item--feature" data-cat="sight" data-tags="ジェラート|サンタ・キアラ教会|ジョジョ">
+    <div class="timeline-time">12:30</div>
+    <div class="timeline-card">
+      <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_113946.jpg');"></div>
+      <div class="timeline-photo" style="background-image:url('../images/Italy01/naples/1766209169120.jpg');"></div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--sight">観光地</span>
+        <button type="button" class="hashtag" data-tag="ジェラート">#ジェラート</button>
+        <button type="button" class="hashtag" data-tag="サンタ・キアラ教会">#サンタ・キアラ教会</button>
+        <button type="button" class="hashtag" data-tag="ジョジョ">#ジョジョ</button>
+      </div>
+      <h3>サンタ・キアラ教会、ジョジョ好きだけが分かる聖地</h3>
+      <div class="info-chips">
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/place/%E3%82%B5%E3%83%B3%E3%82%BF%E3%82%AD%E3%82%A2%E3%83%A9%E6%95%99%E4%BC%9A/@40.8468113,14.2516164,17.2z/data=!4m6!3m5!1s0x133b08445a3df2b7:0x3ddf5c133d3072f3!8m2!3d40.8472262!4d14.2526378!16s%2Fg%2F1224zlt3" target="_blank" rel="noopener"><b>地図</b>サンタ・キアラ教会</a>
+      </div>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Italy01/naples/avatar-jojo-joy.svg" alt="">
+        <p class="voice-bubble">とにかくうれしかったです</p>
+      </div>
+      <p>途中でジェラートを食べながら、サンタ・キアラ教会へ向かいました。特に何もない場所ですが、ジョジョが好きな人には、ここがどんな場所か分かります。パッショーネの入団試験で、ライターの火が出てくる場面の場所です。</p>
+      <p>駅でライターを買っておいたので、その場で真似をしてみました。はたから見れば、階段の前でひとりライターを構えている怪しい人です。それでも、とにかくうれしかったです。ここに来るためにナポリに来たと言っても過言ではありません。</p>
+    </div>
+  </div>
+
+  <div id="tl-1330" class="timeline-item timeline-item--feature" data-cat="meal" data-tags="レモンチェッロ|バー">
+    <div class="timeline-time">13:30</div>
+    <div class="timeline-card">
+      <div class="timeline-photos">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/1766147721210.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_134710.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--meal">休憩</span>
+        <button type="button" class="hashtag" data-tag="レモンチェッロ">#レモンチェッロ</button>
+        <button type="button" class="hashtag" data-tag="バー">#バー</button>
+      </div>
+      <h3>歩き疲れてバーで休憩。レモンチェッロで顔が真っ赤に</h3>
+      <div class="info-chips">
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/place/Insolito+Bistrot/@40.8458336,14.2502678,17.2z/data=!4m6!3m5!1s0x133b0995bbd7e707:0x5703824717d2f55a!8m2!3d40.8450866!4d14.2501557!16s%2Fg%2F11vdlzsyk1" target="_blank" rel="noopener"><b>地図</b>Insolito Bistrot</a>
+      </div>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Italy01/naples/avatar-jojo-tipsy.svg" alt="">
+        <p class="voice-bubble">アルコールが強すぎて、ゆでダコのように真っ赤な顔で歩いていました</p>
+      </div>
+      <p>さすがに歩き疲れたので、ケーブルカーの駅に向かう途中で、バーのようなお店に入って休憩しました。せっかくなので、レモンチェッロを注文しました。</p>
+      <p>ところが、アルコールがとても強く、飲み終わるころには顔がゆでダコのように真っ赤になっていました。そのまま赤い顔で街を歩いていたので、昼間のイタリアでかなり目立っていたと思います。</p>
+      <div class="notes">
+        <p class="note note--trivia"><b>豆知識</b>レモンチェッロは、レモンの皮をお酒に漬けてつくる、イタリア南部の甘いリキュール。食後に冷やして飲むことが多く、アルコール度数は高め</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tl-1420" class="timeline-item timeline-item--feature" data-cat="move" data-tags="ケーブルカー|ジョジョ">
+    <div class="timeline-time">14:20</div>
+    <div class="timeline-card">
+      <div class="timeline-photos">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_141818.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_142324.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--move">移動</span>
+        <button type="button" class="hashtag" data-tag="ケーブルカー">#ケーブルカー</button>
+        <button type="button" class="hashtag" data-tag="ジョジョ">#ジョジョ</button>
+      </div>
+      <h3>モンテサント駅からケーブルカー、ここもジョジョの聖地</h3>
+      <div class="info-chips">
+        <span class="info-chip"><b>所要</b>約15分</span>
+        <span class="info-chip"><b>行き先</b>Morghen駅</span>
+      </div>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Italy01/naples/avatar-jojo-spooked.svg" alt="">
+        <p class="voice-bubble">古めかしくて、少し怖かったです</p>
+      </div>
+      <p>モンテサント駅からケーブルカーに乗り、行き先はMorghen駅です。所要時間は約15分。チケットの買い方は忘れてしまいました。</p>
+      <p>実はここもジョジョの聖地です。ただ、場所柄なのか、全体的に古くて、少し怖い雰囲気でした。それでも、車窓から見える景色はどんどん良くなり、期待だけは上がり続けました。</p>
+    </div>
+  </div>
+
+  <div id="tl-1500" class="timeline-item timeline-item--feature" data-cat="sight" data-tags="観光地散策|サンテルモ城|絶景">
+    <div class="timeline-time">15:00</div>
+    <div class="timeline-card">
+      <div class="timeline-photos timeline-photos--3">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_150136.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_150916.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_151324.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--sight">観光</span>
+        <button type="button" class="hashtag" data-tag="観光地散策">#観光地散策</button>
+        <button type="button" class="hashtag" data-tag="サンテルモ城">#サンテルモ城</button>
+        <button type="button" class="hashtag" data-tag="絶景">#絶景</button>
+      </div>
+      <h3>サンテルモ城は、ほぼ登山。でも景色で疲れが吹き飛んだ</h3>
+      <div class="info-chips">
+        <span class="info-chip"><b>料金</b>入場料 1名 5€（約900円）</span>
+        <span class="info-chip"><b>滞在</b>約1時間（15:00〜16:00頃）</span>
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/place/%E3%82%B5%E3%83%B3%E3%83%86%E3%83%AB%E3%83%A2%E5%9F%8E/@40.8321772,14.2138972,14.49z/data=!4m6!3m5!1s0x133b0857facddd79:0x8c6348cc33dd4f6f!8m2!3d40.8444515!4d14.2388951!16zL20vMGgwN2Zk" target="_blank" rel="noopener"><b>地図</b>サンテルモ城</a>
+      </div>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Italy01/naples/avatar-jojo-awe.svg" alt="">
+        <p class="voice-bubble">絶対に忘れられない景色です</p>
+      </div>
+      <p>サンテルモ城に到着しました。ケーブルカーの道中の景色もとてもきれいでしたが、城からの眺めはそれ以上でした。僕が城にいたのは、16:00ごろまでの1時間ほどです。公式の営業時間は8:30〜19:30（最終入場18:30）なので、もっとゆっくり見ることもできます。でも、僕はそれで十分でした。</p>
+      <p>屋上までは、ゲートをくぐりながら、城の中の一本道を歩いて登ります。途中には大砲の穴などもあり、本格的です。城の中はかなり歩くので、とても疲れます。ちょっとした登山のようでした。それでも、登りきった先には、海も山も町も、ナポリのすべてを見渡せる景色が待っていました。天気にも恵まれて、本当に気持ちのいい時間でした。絶対に忘れられない景色です。入場料は、公式サイトによると1人5ユーロ（約900円）です。</p>
+      <div class="notes">
+        <p class="note note--warn"><b>注意</b>営業は8:30〜19:30（最終入場18:30）で、火曜は休み。城内はかなり歩くので、時間に余裕を</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tl-1630" class="timeline-item timeline-item--feature" data-cat="move" data-tags="下山|散歩">
+    <div class="timeline-time">16:30</div>
+    <div class="timeline-card">
+      <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_162326.jpg');"></div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--move">下山</span>
+        <button type="button" class="hashtag" data-tag="下山">#下山</button>
+        <button type="button" class="hashtag" data-tag="散歩">#散歩</button>
+      </div>
+      <h3>下山は、登りの苦労がうそのように楽だった</h3>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Italy01/naples/avatar-jojo-smile.svg" alt="">
+        <p class="voice-bubble">下山は楽でした</p>
+      </div>
+      <p>景色を見終えたころ、暗くなってきたことと、ごはんを食べて帰りたいという思いから、駅の方向へ下山しました。登りは大変そうでしたが、下りは驚くほど楽でした。道中の街並みもすばらしく、楽しく歩いて降りてきました。モンテサント駅の近くまで下りたら、そこから地下鉄に乗ってナポリ駅へ向かいました。</p>
+    </div>
+  </div>
+
+  <div id="tl-1730" class="timeline-item timeline-item--feature" data-cat="meal" data-tags="ディナー|海鮮パスタ|リゾット">
+    <div class="timeline-time">17:30</div>
+    <div class="timeline-card">
+      <div class="timeline-photos">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_175839.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_175901.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--meal">食事</span>
+        <button type="button" class="hashtag" data-tag="ディナー">#ディナー</button>
+        <button type="button" class="hashtag" data-tag="海鮮パスタ">#海鮮パスタ</button>
+        <button type="button" class="hashtag" data-tag="リゾット">#リゾット</button>
+      </div>
+      <h3>シェフに声をかけられて入った店の、リゾットが忘れられない</h3>
+      <div class="info-chips">
+        <span class="info-chip"><b>料金</b>1皿 約11€（約2,000円）／ 2名でドリンク込み約28€（約5,000円）</span>
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/place/I+Sapori+di+Parthenope/@40.8517734,14.2638694,16.19z/data=!3m1!5s0x133b08165a05479d:0x20534018ad21c81b!4m6!3m5!1s0x133b09892ad5003b:0x2979964a0d93dd9a!8m2!3d40.8517608!4d14.2705519!16s%2Fg%2F11gy1lfr5d" target="_blank" rel="noopener"><b>地図</b>I Sapori di Parthenope</a>
+      </div>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Italy01/naples/avatar-jojo-joy.svg" alt="">
+        <p class="voice-bubble">リゾットをもう一回食べたいなあ</p>
+      </div>
+      <p>駅の近くを歩いていたら、シェフのような格好をした人に声をかけられました。Googleの評価も悪くなかったので、そのお店に入ってみることにしました。僕たち以外のお客さんは1組だけでした。Googleの評価は多いのに人がいないお店は、イタリアではほかにもありました。理由はよく分かりません。</p>
+      <p>メニューに迷っていると「パスタはこれがおいしいよ」と教えてもらったので、それとリゾットを注文しました。最初は味が濃いように感じましたが、食べ進めるうちにどんどんおいしくなってきました。海鮮パスタは海鮮の味がしっかりしていて、大満足です。リゾットも、もう一度食べたいほどでした。ただ、値段は1皿 約11ユーロ（2,000円ほど）と高めです。それでも、パンが食べ放題だったので、オリーブオイルをつけてたくさん食べました。ドリンクを含めて、2名の合計は約28ユーロ（5,000円ほど）でした。</p>
+      <div class="notes">
+        <p class="note note--tip"><b>オススメ</b>パンが食べ放題（オリーブオイルをつけて食べました）</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tl-1900" class="timeline-item timeline-item--compact" data-cat="move" data-tags="新幹線|Venchi|ジェラート">
+    <div class="timeline-time">19:00</div>
+    <div class="timeline-card">
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--move">移動</span>
+        <button type="button" class="hashtag" data-tag="新幹線">#新幹線</button>
+        <button type="button" class="hashtag" data-tag="Venchi">#Venchi</button>
+        <button type="button" class="hashtag" data-tag="ジェラート">#ジェラート</button>
+      </div>
+      <h3>ナポリ駅からローマへ。ぐっすり眠って、テルミニでジェラート</h3>
+      <div class="info-chips">
+        <span class="info-chip"><b>到着</b>ローマ 20:50頃</span>
+      </div>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Italy01/naples/avatar-jojo-joy.svg" alt="">
+        <p class="voice-bubble">ジェラート、めちゃくちゃおいしいです</p>
+      </div>
+      <p>駅にお土産になりそうなものがなかったので、そのまま新幹線に乗りました。一日中ずっと歩いていたので、さすがに疲れて、ぐっすり眠ってしまいました。あっという間にローマに到着です。テルミニ駅に着くと、Venchiがまだ営業していたので、ジェラートを食べました。めちゃくちゃおいしかったです。ジェラートには詳しくありませんが、どのお店にもピスタチオがあったので、きっとピスタチオが定番なのだと思います。</p>
+    </div>
+  </div>
+
+  <div id="tl-2100" class="timeline-item timeline-item--feature" data-cat="shop" data-tags="スーパー|お土産|リゾット">
+    <div class="timeline-time">21:00</div>
+    <div class="timeline-card">
+      <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Italy01/naples/20251219_210828.jpg');"></div>
+      <div class="timeline-photo" style="background-image:url('../images/Italy01/naples/20251220_072156.jpg');"></div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--shop">買い物</span>
+        <button type="button" class="hashtag" data-tag="スーパー">#スーパー</button>
+        <button type="button" class="hashtag" data-tag="お土産">#お土産</button>
+        <button type="button" class="hashtag" data-tag="リゾット">#リゾット</button>
+      </div>
+      <h3>最後はスーパーでお土産選び。オレンジ絞り機に大興奮</h3>
+      <div class="info-chips">
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/place/CONAD+CITY/@41.903534,12.4959522,16.41z/data=!4m9!1m2!2m1!1z44OG44Or44Of44OL6aeF44CA44K444Kn44Op44O844OI!3m5!1s0x132f61a0c7785825:0x96108a74aa7fe9c8!8m2!3d41.9046302!4d12.502029!16s%2Fg%2F11bxjhpk1_" target="_blank" rel="noopener"><b>地図</b>CONAD CITY（ローマ）</a>
+      </div>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Italy01/naples/avatar-jojo-awe.svg" alt="">
+        <p class="voice-bubble">オレンジの生搾りジュースの機械があって、興奮しました</p>
+      </div>
+      <p>ジェラートを食べ終わったあと、そのままスーパーへ向かいました。お土産を買うためです。比較的大きなスーパーを選んで行きました。そこで見つけたのが、オレンジを生搾りしてくれるジュースの機械です。これにはとても興奮しました。</p>
+      <p>友人から「お土産にはスープやリゾットがいいよ」と聞いていたので、お目当てのトリュフリゾットを探しましたが、残念ながらありませんでした。代わりに、ほかのリゾットを購入しました。あとは、ビールとレモンチェッロの原液です。日本でも売っていたら買いたいです。</p>
+      <p>というわけで、ローマからナポリへの日帰り旅は、ピザにジョジョに絶景と、盛りだくさんの一日でした。足は棒のようになりましたが、満足度は今回の旅でも上位に入ると思います。最後まで読んでくれて、ありがとうございました。</p>
+      <div class="notes">
+        <p class="note note--tip"><b>オススメ</b>お土産にはスープやリゾットがおすすめ（友人の情報）</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<section class="route-strip" aria-label="この日のルート">
+  <p class="route-strip-caption">ROUTE — ROMA → NAPOLI → ROMA</p>
+  <ol class="route-strip-list">
+    <li><time>7:50</time><span>テルミニ駅</span></li>
+    <li><time>9:30</time><span>ナポリ駅</span></li>
+    <li><time>10:30</time><span>ダ・ミケーレ</span></li>
+    <li><time>15:00</time><span>サンテルモ城</span></li>
+    <li><time>19:00</time><span>ローマへ</span></li>
+  </ol>
+</section>
+
+<section class="nmap" id="map" aria-label="この日の移動の地図">
+  <p class="nmap-caption">MAP — この日の道のり（ざっくり）</p>
+  <div class="nmap-real" id="nmapReal" hidden></div>
+  <div class="nmap-canvas">
+    <svg class="nmap-lines" viewBox="0 0 1000 750" preserveAspectRatio="none" aria-hidden="true">
+      <path class="ln-walk" d="M700 255 L545 125 L470 380 L400 520 L250 665"/>
+      <path class="ln-walk" d="M150 590 L70 520"/>
+      <path class="ln-walk" d="M70 520 C110 700 200 720 250 665"/>
+      <path class="ln-walk" d="M925 75 L880 320"/>
+      <path class="ln-metro" d="M925 75 L700 255"/>
+      <path class="ln-metro" d="M250 665 C520 760 900 640 960 330 L925 75"/>
+      <path class="ln-funi" d="M250 665 L150 590"/>
+    </svg>
+    <span class="nmap-area" style="left:2%;top:36%">ヴォメロ地区（高台）</span>
+    <span class="nmap-tag" style="left:81%;top:22.5%">地下鉄1駅</span>
+    <span class="nmap-tag" style="left:70%;top:92%">地下鉄</span>
+    <span class="nmap-tag" style="left:14%;top:91%">ケーブルカー</span>
+    <a class="nmap-pin" data-key="1" data-lat="40.8532" data-lng="14.2724" href="#tl-0930" style="left:92.5%;top:10.0%" aria-label="1. ナポリ駅"><span class="nmap-photo" style="background-image:url('../images/Italy01/naples/map-1.jpg')"></span><span class="nmap-num">1</span><span class="nmap-name">ナポリ駅</span></a>
+    <a class="nmap-pin" data-key="2" data-lat="40.8497563" data-lng="14.2633002" href="#tl-1030" style="left:70.0%;top:34.0%" aria-label="2. ダ・ミケーレ"><span class="nmap-photo" style="background-image:url('../images/Italy01/naples/map-2.jpg')"></span><span class="nmap-num">2</span><span class="nmap-name">ダ・ミケーレ</span></a>
+    <a class="nmap-pin" data-key="3" data-lat="40.8515175" data-lng="14.2588326" href="#tl-1100" style="left:54.5%;top:16.7%" aria-label="3. トリブナリ通り"><span class="nmap-photo" style="background-image:url('../images/Italy01/naples/map-3.jpg')"></span><span class="nmap-num">3</span><span class="nmap-name">トリブナリ通り</span></a>
+    <a class="nmap-pin" data-key="4" data-lat="40.8472262" data-lng="14.2526378" href="#tl-1230" style="left:47.0%;top:50.7%" aria-label="4. サンタ・キアラ教会"><span class="nmap-photo" style="background-image:url('../images/Italy01/naples/map-4.jpg')"></span><span class="nmap-num">4</span><span class="nmap-name">サンタ・キアラ教会</span></a>
+    <a class="nmap-pin" data-key="5" data-lat="40.8455" data-lng="14.2508" href="#tl-1330" style="left:40.0%;top:69.3%" aria-label="5. バー"><span class="nmap-photo" style="background-image:url('../images/Italy01/naples/map-5.jpg')"></span><span class="nmap-num">5</span><span class="nmap-name">バー</span></a>
+    <a class="nmap-pin" data-key="6" data-lat="40.844" data-lng="14.2478" href="#tl-1420" style="left:25.0%;top:88.7%" aria-label="6. モンテサント駅"><span class="nmap-photo" style="background-image:url('../images/Italy01/naples/map-6.jpg')"></span><span class="nmap-num">6</span><span class="nmap-name">モンテサント駅</span></a>
+    <a class="nmap-pin" data-key="7" data-lat="40.8444515" data-lng="14.2388951" href="#tl-1500" style="left:7.0%;top:69.3%" aria-label="7. サンテルモ城"><span class="nmap-photo" style="background-image:url('../images/Italy01/naples/map-7.jpg')"></span><span class="nmap-num">7</span><span class="nmap-name">サンテルモ城</span></a>
+    <a class="nmap-pin" data-key="8" data-lat="40.8517608" data-lng="14.2705519" href="#tl-1730" style="left:88.0%;top:42.0%" aria-label="8. レストラン"><span class="nmap-photo" style="background-image:url('../images/Italy01/naples/map-8.jpg')"></span><span class="nmap-num">8</span><span class="nmap-name">レストラン</span></a>
+  </div>
+  <ul class="nmap-key">
+    <li class="k-walk">徒歩</li><li class="k-metro">地下鉄</li><li class="k-funi">ケーブルカー</li>
+  </ul>
+  <div class="nmap-total">
+    <div class="nmap-stat"><p class="nmap-stat-label">歩いた距離</p><p class="nmap-stat-value">約<b>4.1</b>km</p></div>
+    <div class="nmap-stat"><p class="nmap-stat-label">歩いた時間</p><p class="nmap-stat-value">約<b>55</b>分</p></div>
+  </div>
+  <ul class="nmap-legs" aria-label="歩いた区間ごとの距離と時間">
+      <li><span class="nmap-leg-name">ダ・ミケーレ<i>→</i>トリブナリ通り</span><span class="nmap-leg-bar"><span style="width:36%"></span></span><span class="nmap-leg-dist">600m</span><span class="nmap-leg-time">8分</span></li>
+      <li><span class="nmap-leg-name">トリブナリ通り<i>→</i>サンタ・キアラ教会</span><span class="nmap-leg-bar"><span style="width:55%"></span></span><span class="nmap-leg-dist">900m</span><span class="nmap-leg-time">12分</span></li>
+      <li><span class="nmap-leg-name">サンタ・キアラ教会<i>→</i>バー</span><span class="nmap-leg-bar"><span style="width:26%"></span></span><span class="nmap-leg-dist">430m</span><span class="nmap-leg-time">6分</span></li>
+      <li><span class="nmap-leg-name">バー<i>→</i>モンテサント駅</span><span class="nmap-leg-bar"><span style="width:8%"></span></span><span class="nmap-leg-dist">130m</span><span class="nmap-leg-time">2分</span></li>
+      <li><span class="nmap-leg-name">Morghen駅<i>→</i>サンテルモ城</span><span class="nmap-leg-bar"><span style="width:12%"></span></span><span class="nmap-leg-dist">200m</span><span class="nmap-leg-time">3分</span></li>
+      <li><span class="nmap-leg-name">サンテルモ城<i>→</i>モンテサント駅（下山）</span><span class="nmap-leg-bar"><span style="width:100%"></span></span><span class="nmap-leg-dist">1.7km</span><span class="nmap-leg-time">22分</span></li>
+      <li><span class="nmap-leg-name">ナポリ駅<i>→</i>レストラン</span><span class="nmap-leg-bar"><span style="width:13%"></span></span><span class="nmap-leg-dist">200m</span><span class="nmap-leg-time">3分</span></li>
+  </ul>
+  <p class="nmap-legs-note">地下鉄とケーブルカーの時間は含まない、徒歩だけの目安です</p>
+  <ol class="nmap-steps">
+    <li><b>ナポリ駅</b><span>地下鉄で1駅（Duomo駅）</span></li>
+    <li><b>ダ・ミケーレ</b><span>歩いてトリブナリ通りへ</span></li>
+    <li><b>トリブナリ通り</b><span>歩いてサンタ・キアラ教会へ</span></li>
+    <li><b>サンタ・キアラ教会</b><span>歩いてバーへ（休憩）</span></li>
+    <li><b>バー</b><span>歩いてモンテサント駅へ</span></li>
+    <li><b>モンテサント駅</b><span>ケーブルカーでMorghen駅へ。そこから城まで歩きます</span></li>
+    <li><b>サンテルモ城</b><span>歩いて下り、地下鉄でナポリ駅へ（Piazza Cavour経由）</span></li>
+    <li><b>駅の近くのレストラン</b><span>駅から歩いてすぐ。このあと新幹線でローマへ</span></li>
+  </ol>
+  <p class="nmap-note">歩く線は、地図サービスで計算した徒歩の最短ルートです。距離と時間はその目安で、街歩きの寄り道や城の中は含みません。写真を押すと、その時間の記事に移動します</p>
+</section>
+
+<section class="timebar" aria-label="この日の時間の使い方">
+  <p class="timebar-caption">TIME — 7:50 → 21:30</p>
+  <div class="timebar-track">
+    <span class="timebar-seg timebar-seg--move" style="flex:100" title="7:50〜9:30 新幹線でナポリへ"></span>
+    <span class="timebar-seg timebar-seg--move" style="flex:60" title="9:30〜10:30 ナポリ駅・地下鉄"></span>
+    <span class="timebar-seg timebar-seg--meal" style="flex:30" title="10:30〜11:00 ダ・ミケーレ"></span>
+    <span class="timebar-seg timebar-seg--sight" style="flex:150" title="11:00〜13:30 街歩き・サンタ・キアラ教会"></span>
+    <span class="timebar-seg timebar-seg--meal" style="flex:50" title="13:30〜14:20 バーで休憩"></span>
+    <span class="timebar-seg timebar-seg--move" style="flex:40" title="14:20〜15:00 ケーブルカー"></span>
+    <span class="timebar-seg timebar-seg--sight" style="flex:90" title="15:00〜16:30 サンテルモ城"></span>
+    <span class="timebar-seg timebar-seg--move" style="flex:60" title="16:30〜17:30 下山"></span>
+    <span class="timebar-seg timebar-seg--meal" style="flex:90" title="17:30〜19:00 ディナー"></span>
+    <span class="timebar-seg timebar-seg--move" style="flex:110" title="19:00〜20:50 新幹線でローマへ"></span>
+    <span class="timebar-seg timebar-seg--meal" style="flex:10" title="20:50〜21:00 ジェラート"></span>
+    <span class="timebar-seg timebar-seg--shop" style="flex:30" title="21:00〜21:30 スーパー"></span>
+  </div>
+  <div class="timebar-axis"><span style="left:0">7:50</span><span style="left:30.5%">12:00</span><span style="left:67.1%">17:00</span><span style="left:100%">21:30</span></div>
+  <ul class="timebar-legend"><li class="is-move">移動</li><li class="is-sight">観光</li><li class="is-meal">食事</li><li class="is-shop">買い物</li></ul>
+</section>
+
+<section class="journey-summary" id="journey">
+  <div class="container">
+    <div class="section-head">
+      <p class="section-eyebrow">TODAY'S JOURNEY</p>
+      <h2>この日の旅程を振り返る</h2>
+    </div>
+    <div class="journey-list">
+      <div class="journey-row"><time>7:50</time><span>テルミニ駅から新幹線でナポリへ</span></div>
+      <div class="journey-row"><time>9:30</time><span>ナポリ駅に到着</span></div>
+      <div class="journey-row"><time>10:30</time><span>ダ・ミケーレ本店でピザ（マルゲリータ・マリナーラ）</span></div>
+      <div class="journey-row"><time>11:00</time><span>トリブナリ通りを散策、マラドーナの壁画</span></div>
+      <div class="journey-row"><time>12:30</time><span>サンタ・キアラ教会でジョジョの聖地巡り</span></div>
+      <div class="journey-row"><time>13:30</time><span>バーで休憩、レモンチェッロ</span></div>
+      <div class="journey-row"><time>14:20</time><span>モンテサント駅からケーブルカー</span></div>
+      <div class="journey-row"><time>15:00</time><span>サンテルモ城</span></div>
+      <div class="journey-row"><time>16:30</time><span>下山</span></div>
+      <div class="journey-row"><time>17:30</time><span>駅近くのレストランで夕食（海鮮パスタ・リゾット）</span></div>
+      <div class="journey-row"><time>19:00</time><span>新幹線でローマへ、テルミニでジェラート</span></div>
+      <div class="journey-row"><time>21:00</time><span>スーパーでお土産購入</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="trip-notes" id="info">
+  <div class="container">
+    <div class="section-head">
+      <p class="section-eyebrow">USEFUL INFO</p>
+      <h2>お役立ち情報まとめ</h2>
+    </div>
+    <div class="notes-board">
+
+      <article class="notes-card">
+        <h3>料金まとめ</h3>
+        <p class="rate-note">円は、当時のレート <b>1€＝約180円</b> で計算しています</p>
+        <ul class="cost-list">
+          <li><span class="cost-name">新幹線（ローマ → ナポリ）</span><span class="cost-value">2名で約100€（約18,000円）</span><span class="cost-memo">1名あたり約50€（約9,000円）。早めに買うともっと安くなります</span></li>
+          <li><span class="cost-name">ダ・ミケーレ　マルゲリータ</span><span class="cost-value">6€（約1,000円）</span></li>
+          <li><span class="cost-name">ダ・ミケーレ　合計</span><span class="cost-value">2名で18€（約3,200円）</span><span class="cost-memo">ピザ2枚とドリンク。現金のみで、20€を払って、おつり2€はチップに</span></li>
+          <li><span class="cost-name">サンテルモ城　入場料</span><span class="cost-value">1名 5€（約900円）</span><span class="cost-memo">公式サイトの通常料金。割引料金は2€</span></li>
+          <li><span class="cost-name">ディナー（海鮮パスタ・リゾットなど）</span><span class="cost-value">2名で約28€（約5,000円）</span><span class="cost-memo">ドリンク込み。1皿 約11€（約2,000円）で、パンは食べ放題でした</span></li>
+        </ul>
+        <p class="notes-foot">金額はおおよその目安です（円は1€＝約180円で計算）。地下鉄・ケーブルカー・ジェラート・スーパーの料金は控えていません。</p>
+      </article>
+
+      <article class="notes-card">
+        <h3>場所まとめ</h3>
+        <ul class="spot-list">
+          <li><span class="spot-time">10:30</span><span class="spot-name">ダ・ミケーレ本店（L'Antica Pizzeria da Michele）</span><span class="cat-tag cat-tag--meal">食事</span><a class="info-chip info-chip--map" href="https://www.google.com/maps/place/L'Antica+Pizzeria+da+Michele/@40.8501774,14.2557102,16.83z/data=!3m1!5s0x133b083f8c37f599:0xae0ad3e3cb1579ac!4m6!3m5!1s0x133b083f8db6b079:0x5ab2972d7365b642!8m2!3d40.8497563!4d14.2633002!16s%2Fg%2F1tdbyxpz" target="_blank" rel="noopener"><b>地図</b>開く</a><span class="spot-addr">Via Cesare Sersale, 1, 80139 Napoli</span></li>
+          <li><span class="spot-time">11:00</span><span class="spot-name">トリブナリ通り</span><span class="cat-tag cat-tag--sight">観光</span><a class="info-chip info-chip--map" href="https://www.google.com/maps/place/Via+dei+Tribunali,+Napoli+NA,+%E3%82%A4%E3%82%BF%E3%83%AA%E3%82%A2/@40.8506678,14.2574018,17.39z/data=!4m6!3m5!1s0x133b0841dbfc5987:0xf7000059136aa614!8m2!3d40.8515175!4d14.2588326!16s%2Fm%2F025y884" target="_blank" rel="noopener"><b>地図</b>開く</a></li>
+          <li><span class="spot-time">12:30</span><span class="spot-name">サンタ・キアラ教会</span><span class="cat-tag cat-tag--sight">観光</span><a class="info-chip info-chip--map" href="https://www.google.com/maps/place/%E3%82%B5%E3%83%B3%E3%82%BF%E3%82%AD%E3%82%A2%E3%83%A9%E6%95%99%E4%BC%9A/@40.8468113,14.2516164,17.2z/data=!4m6!3m5!1s0x133b08445a3df2b7:0x3ddf5c133d3072f3!8m2!3d40.8472262!4d14.2526378!16s%2Fg%2F1224zlt3" target="_blank" rel="noopener"><b>地図</b>開く</a></li>
+          <li><span class="spot-time">13:30</span><span class="spot-name">Insolito Bistrot（バー）</span><span class="cat-tag cat-tag--meal">休憩</span><a class="info-chip info-chip--map" href="https://www.google.com/maps/place/Insolito+Bistrot/@40.8458336,14.2502678,17.2z/data=!4m6!3m5!1s0x133b0995bbd7e707:0x5703824717d2f55a!8m2!3d40.8450866!4d14.2501557!16s%2Fg%2F11vdlzsyk1" target="_blank" rel="noopener"><b>地図</b>開く</a></li>
+          <li><span class="spot-time">15:00</span><span class="spot-name">サンテルモ城</span><span class="cat-tag cat-tag--sight">観光</span><a class="info-chip info-chip--map" href="https://www.google.com/maps/place/%E3%82%B5%E3%83%B3%E3%83%86%E3%83%AB%E3%83%A2%E5%9F%8E/@40.8321772,14.2138972,14.49z/data=!4m6!3m5!1s0x133b0857facddd79:0x8c6348cc33dd4f6f!8m2!3d40.8444515!4d14.2388951!16zL20vMGgwN2Zk" target="_blank" rel="noopener"><b>地図</b>開く</a></li>
+          <li><span class="spot-time">17:30</span><span class="spot-name">I Sapori di Parthenope</span><span class="cat-tag cat-tag--meal">食事</span><a class="info-chip info-chip--map" href="https://www.google.com/maps/place/I+Sapori+di+Parthenope/@40.8517734,14.2638694,16.19z/data=!3m1!5s0x133b08165a05479d:0x20534018ad21c81b!4m6!3m5!1s0x133b09892ad5003b:0x2979964a0d93dd9a!8m2!3d40.8517608!4d14.2705519!16s%2Fg%2F11gy1lfr5d" target="_blank" rel="noopener"><b>地図</b>開く</a></li>
+          <li><span class="spot-time">21:00</span><span class="spot-name">CONAD CITY（ローマのスーパー）</span><span class="cat-tag cat-tag--shop">買い物</span><a class="info-chip info-chip--map" href="https://www.google.com/maps/place/CONAD+CITY/@41.903534,12.4959522,16.41z/data=!4m9!1m2!2m1!1z44OG44Or44Of44OL6aeF44CA44K444Kn44Op44O844OI!3m5!1s0x132f61a0c7785825:0x96108a74aa7fe9c8!8m2!3d41.9046302!4d12.502029!16s%2Fg%2F11bxjhpk1_" target="_blank" rel="noopener"><b>地図</b>開く</a></li>
+        </ul>
+      </article>
+
+      <article class="notes-card">
+        <h3>お役立ち情報</h3>
+        <div class="tip-box tip-box--warn">
+          <h4>注意</h4>
+          <ul>
+            <li>新幹線は遅延することがあります（今回は5分後の発車予定が20分後に）</li>
+            <li>ナポリ駅周辺は、治安が悪いと言われています</li>
+            <li>ダ・ミケーレでは水も有料です</li>
+            <li>ダ・ミケーレは現金のみです。今回は、おつりの2€を「チップ」と言われて渡しました</li>
+            <li>サンテルモ城は火曜が休みです。営業は19:30まで（最終入場18:30）ですが、城内はかなり歩くので、時間に余裕を持って</li>
+          </ul>
+        </div>
+        <div class="tip-box tip-box--tip">
+          <h4>オススメ</h4>
+          <ul>
+            <li>鉄道チケットは早めに購入すると安くなります（20〜30€ほどの差があったと思います）</li>
+            <li>ピザは1人1枚が基本。ナイフとフォークで食べます</li>
+            <li>夕食のパンは食べ放題。オリーブオイルをつけて食べました</li>
+            <li>お土産にはスープやリゾットがおすすめです（友人の情報）</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="logo">旅と、記録。</p>
+      <p class="footer-note">© 2026 Tabi to Kiroku. All rights reserved.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../index.html#featured">旅行記</a>
+      <a href="../index.html#destinations">エリアから探す</a>
+      <a href="../index.html#about">このサイトについて</a>
+      <a href="../index.html#contact">お問い合わせ</a>
+    </div>
+    <div class="footer-social">
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="X">X</a>
+      <a href="#" aria-label="YouTube">YouTube</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="../js/timeline-filter.js"></script>
+<script src="../js/route-map.js"></script>
+<script src="../js/lightbox.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
