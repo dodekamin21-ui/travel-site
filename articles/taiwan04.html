@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>またやってきました台湾。たくちゃん4回目の台北・台中4日間。| 旅と、記録。</title>
+<title>台湾3泊4日。小籠包、足湯、日月潭、そして台湾おにぎり。| 旅と、記録。</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -27,220 +28,710 @@
 </header>
 
 <section class="article-hero">
-  <div class="article-hero-bg" style="background-image:url('../images/Taiwan04/20260426_130929.jpg');"></div>
+  <div class="article-hero-bg" style="background-image:url('../images/Taiwan04/20260426_130929.jpg'); background-position:center 55%;"></div>
   <div class="article-hero-content container">
-    <p class="article-eyebrow">TAIWAN, TAKE 4.</p>
-    <h1>またやってきました台湾。<br>たくちゃん、4回目の台北・台中4日間。</h1>
+    <p class="article-eyebrow">TAIWAN, 3 NIGHTS 4 DAYS.</p>
+    <h1>台湾3泊4日。<br>小籠包、<wbr>足湯、<wbr>日月潭、<wbr>そして台湾おにぎり。</h1>
     <div class="article-meta">
-      <span>2026.04.24 - 04.27</span>
-      <span>台北 ⇄ 台中・日月潭</span>
+      <span>2026.04.24–27</span>
+      <span>成田 ⇄ 台北</span>
       <span>3泊4日</span>
     </div>
   </div>
 </section>
 
-<p class="container article-breadcrumb"><a href="../index.html">トップ</a> ／ 旅行記 ／ またやってきました台湾、たくちゃん4回目の4日間</p>
+<p class="container article-breadcrumb"><a href="../index.html">トップ</a> ／ 旅行記 ／ 台湾3泊4日。小籠包、足湯、日月潭、そして台湾おにぎり。</p>
 
 <section class="article-intro container">
   <div class="article-prose">
-    <p>はい、たくちゃんです。台湾、これで4回目です。もう空港の職員さんに顔を覚えられてるんじゃないかってレベルなんですが、それでも懲りずにまた行ってきました。理由なんてありません、強いて言うなら「小籠包が恋しくなったから」。それだけで航空券を取れる人間になってしまいました。今回は3泊4日、台北と台中・日月潭を欲張りに巡ってきたので、記憶が新鮮なうちに吐き出しておきます。オチのない話も多いですが、それも含めて旅なので付き合ってください。</p>
+    <p>友達と2人で、台湾に3泊4日で行ってきました。何度か来ている台湾ですが、今回も食べ歩きが中心です。小籠包にネギ餅、足湯に日月潭、最後は台湾おにぎりまで、気がつけば食べてばかりの旅でした。料金は台湾元（元）で、日本円は1元＝約5円で計算しています。日ごとに、時間の流れに沿って書いていきます。</p>
   </div>
 </section>
 
-<div class="chapter-marker"><span>DAY 1 — 4/24 TAIPEI</span></div>
+<nav class="toc" aria-label="目次">
+  <p class="toc-title">目次</p>
+  <p class="toc-day">4/24</p>
+  <ol class="toc-list toc-list--day">
+    <li><a href="#tl-0424-1600"><time>16:00</time><span>成田から台北へ</span></a></li>
+    <li><a href="#tl-0424-2220"><time>22:20</time><span>京鼎楼の小籠包</span></a></li>
+  </ol>
+  <p class="toc-day">4/25</p>
+  <ol class="toc-list toc-list--day">
+    <li><a href="#tl-0425-1100"><time>11:00</time><span>ビーフロールと台北101</span></a></li>
+    <li><a href="#tl-0425-1310"><time>13:10</time><span>ネギ餅</span></a></li>
+    <li><a href="#tl-0425-1530"><time>15:30</time><span>ドクターフィッシュ</span></a></li>
+    <li><a href="#tl-0425-1630"><time>16:30</time><span>地熱谷</span></a></li>
+    <li><a href="#tl-0425-1830"><time>18:30</time><span>士林夜市</span></a></li>
+    <li><a href="#tl-0425-1950"><time>19:50</time><span>お土産（Mia C'bon）</span></a></li>
+    <li><a href="#tl-0425-2100"><time>21:00</time><span>ホテル近くの銅像</span></a></li>
+  </ol>
+  <p class="toc-day">4/26</p>
+  <ol class="toc-list toc-list--day">
+    <li><a href="#tl-0426-0730"><time>7:30</time><span>back numberのロケ地</span></a></li>
+    <li><a href="#tl-0426-1100"><time>11:00</time><span>台北から台中へ</span></a></li>
+    <li><a href="#tl-0426-1310"><time>13:10</time><span>日月潭</span></a></li>
+    <li><a href="#tl-0426-1435"><time>14:35</time><span>朝霧茶荘のアイス</span></a></li>
+    <li><a href="#tl-0426-2100"><time>21:00</time><span>胡椒餅</span></a></li>
+  </ol>
+  <p class="toc-day">4/27</p>
+  <ol class="toc-list toc-list--day">
+    <li><a href="#tl-0427-0915"><time>9:15</time><span>台湾おにぎり</span></a></li>
+    <li><a href="#tl-0427-1130"><time>11:30</time><span>空港ラウンジ</span></a></li>
+  </ol>
+  <ul class="toc-more">
+    <li><a href="#map">地図</a></li>
+    <li><a href="#journey">旅程の振り返り</a></li>
+    <li><a href="#info">料金・場所・お役立ち情報</a></li>
+  </ul>
+</nav>
+
+<div class="filter-bar" role="group" aria-label="絞り込み">
+  <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">すべて</button>
+  <button type="button" class="filter-btn" data-filter="meal" aria-pressed="false">食事</button>
+  <button type="button" class="filter-btn" data-filter="sight" aria-pressed="false">観光</button>
+  <button type="button" class="filter-btn" data-filter="move" aria-pressed="false">移動</button>
+  <button type="button" class="filter-btn" data-filter="shop" aria-pressed="false">買い物</button>
+  <p class="filter-status" hidden><span class="filter-status-text"></span><button type="button" class="filter-clear">解除</button></p>
+</div>
+
+<div class="chapter-marker"><span>4/24 — FLIGHT & TAIPEI</span></div>
 
 <div class="timeline">
 
-  <div class="timeline-item timeline-item--feature">
+  <div id="tl-0424-1600" class="timeline-item timeline-item--feature" data-cat="move" data-tags="キャセイパシフィック|機内食|ハーゲンダッツ">
     <div class="timeline-time">16:00</div>
     <div class="timeline-card">
-      <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260424_170950.jpg');"></div>
-      <h3>キャセイパシフィック、機内食で早くも旅の主役を奪われる</h3>
-      <p>成田を飛び立って約4時間、窓の外はずっとこの雲の絨毯。正直に言うと、僕にとって旅行の何割かは「機内食がどれだけ美味いか」で評価が決まります。異論は認めません。そしてキャセイパシフィック、いきなり優勝候補に躍り出てきました。</p>
-      <p>だってハーゲンダッツですよ。しかもドリンクメニューがジュースから始まってワイン、ビールまで一直線。「これもう飲み放題の飛行機じゃん」と機内で一人ニヤニヤしていたので、隣の席の人には多分ちょっと引かれていたと思います。すみません、次からは真顔で飲みます。</p>
+      <div class="timeline-photos">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260424_170950.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260424_174422.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--move">移動</span>
+        <button type="button" class="hashtag" data-tag="キャセイパシフィック">#キャセイパシフィック</button>
+        <button type="button" class="hashtag" data-tag="機内食">#機内食</button>
+        <button type="button" class="hashtag" data-tag="ハーゲンダッツ">#ハーゲンダッツ</button>
+      </div>
+      <h3>成田から台北へ。機内食にハーゲンダッツが出てきた</h3>
+      <div class="info-chips">
+        <span class="info-chip"><b>所要</b>約4時間</span>
+        <span class="info-chip"><b>航空券</b>42,700円（1名・往復）</span>
+      </div>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Taiwan04/avatar-jojo-joy.svg" alt="">
+        <p class="voice-bubble">キャセイの機内食おいしい。ハーゲンダッツも出てくる！</p>
+      </div>
+      <p>成田国際空港を16:00に出発して、台北桃園国際空港に19:00に着きました。飛行時間は約4時間です。台北は日本より1時間遅れなので、時計の上では3時間しか進んでいません。</p>
+      <p>機内食はキャセイパシフィック航空のものです。デザートにハーゲンダッツが出てきて、ドリンクもジュースからワイン、ビールまであります。飛行機の中なのに、すでに満足でした。</p>
+      <div class="notes">
+        <p class="note note--tip"><b>オススメ</b>キャセイパシフィック航空は素晴らしい</p>
+      </div>
     </div>
   </div>
 
-  <div class="timeline-item timeline-item--feature">
+  <div id="tl-0424-2220" class="timeline-item timeline-item--feature" data-cat="meal" data-tags="小籠包|京鼎楼|台湾ビール">
     <div class="timeline-time">22:20</div>
     <div class="timeline-card">
-      <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260424_222205.jpg');"></div>
-      <h3>着いてすぐ小籠包に突撃する、学習能力ゼロの初日</h3>
-      <p>ホテルに荷物を置いた瞬間、まだ着替えてもいないのに「京鼎楼」へ徒歩でダッシュ。初日の夜から小籠包を欲しがるあたり、僕という人間は多分もう治りません。まぜそばと排骨炒飯もついでに頼んで、台湾ビールで一人乾杯。旅の始まりに乾杯という概念、最高すぎませんか。</p>
-      <p>日本にも似たようなお店はあります。あるんですが、正直に白状すると本場の方が一枚上手でした。日本のみなさん、これは悔しいけど認めましょう。僕らは負けました。次は再戦を挑みます。</p>
+      <div class="timeline-photos timeline-photos--3">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260424_222205.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260424_211258.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260424_222316.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--meal">食事</span>
+        <button type="button" class="hashtag" data-tag="小籠包">#小籠包</button>
+        <button type="button" class="hashtag" data-tag="京鼎楼">#京鼎楼</button>
+        <button type="button" class="hashtag" data-tag="台湾ビール">#台湾ビール</button>
+      </div>
+      <h3>ホテルから歩いて、夜ごはんは京鼎楼の小籠包</h3>
+      <div class="info-chips">
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.0550515,121.5260049" target="_blank" rel="noopener"><b>地図</b>京鼎楼</a>
+        <a class="info-chip info-chip--map" href="https://jidinrou-tw.com/" target="_blank" rel="noopener"><b>サイト</b>公式</a>
+      </div>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Taiwan04/avatar-jojo-joy.svg" alt="">
+        <p class="voice-bubble">日本にもあるけど、日本より美味しい</p>
+      </div>
+      <p>台北に着いた夜は、ホテルから歩いて京鼎楼へ向かいました。時刻はすでに22:20です。注文したのは、小籠包、まぜそば、排骨炒飯、そして台湾ビール。</p>
+      <p>このお店は日本にもあります。それでも、僕の感想は「日本より美味しい」です。小籠包がとにかくおいしいお店でした。</p>
     </div>
   </div>
 
 </div>
 
-<div class="chapter-marker"><span>DAY 2 — 4/25 TAIPEI</span></div>
+<div class="chapter-marker"><span>4/25 — TAIPEI & BEITOU</span></div>
 
 <div class="timeline">
 
-  <div class="timeline-item timeline-item--feature">
+  <div id="tl-0425-1100" class="timeline-item timeline-item--feature" data-cat="meal" data-tags="ビーフロール|周家豆腐捲|台北101">
     <div class="timeline-time">11:00</div>
     <div class="timeline-card">
-      <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_110908.jpg');"></div>
-      <h3>「そっちじゃない方が美味しい」と知りながらビーフロールを頼む男</h3>
-      <p>事前に口コミを調べて「本当はにら肉まんや豆腐パイの方が美味しいらしい」という情報をちゃんと仕入れていたんです。仕入れていたのに、店の前に立った瞬間、僕の口は勝手に「ビーフロール」と言っていました。これ、旅あるあるだと思うんですけどどうでしょうか。頭で分かっていても体が定番を選んでしまう現象、名前をつけたいです。</p>
-      <p>メニューは日本語なし、店員さんも日本語は話せず、コミュニケーションはほぼジェスチャーの総合格闘技。それでも無事にビーフロールにありつけたので、まあ良しとします。ちなみにこの店、目の前に台北101がドーンとそびえていて、朝から「でかいな」しか感想が出てこない自分の語彙力のなさに軽く落ち込みました。</p>
+      <div class="timeline-photos timeline-photos--3">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_105605.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_111006.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_111657.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--meal">食事</span>
+        <button type="button" class="hashtag" data-tag="ビーフロール">#ビーフロール</button>
+        <button type="button" class="hashtag" data-tag="周家豆腐捲">#周家豆腐捲</button>
+        <button type="button" class="hashtag" data-tag="台北101">#台北101</button>
+      </div>
+      <h3>朝ごはんはビーフロール。近くの台北101が、でかい</h3>
+      <div class="info-chips">
+        <span class="info-chip"><b>料金</b>100元（約500円）</span>
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.036381,121.5600247" target="_blank" rel="noopener"><b>地図</b>周家豆腐捲</a>
+      </div>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Taiwan04/avatar-jojo-smile.svg" alt="">
+        <p class="voice-bubble">ビーフロールより、にら肉まんや豆腐パイが美味しいらしい</p>
+      </div>
+      <p>2日目の朝ごはんは、最寄り駅から歩いて周家豆腐捲へ。注文したのはビーフロールです。鍋のような鉄板で、表面をじっくり焼いていました。</p>
+      <p>Googleの口コミを見ると、ビーフロールよりも、にら肉まんや豆腐パイのほうがおいしいらしいです。次に行くなら、そちらを食べてみたいです。日本語のメニューがあるようですが、日本語は通じませんでした。</p>
+      <p>お店の近くには台北101があります。見上げると、とにかくでかいです。</p>
+      <div class="notes">
+        <p class="note note--warn"><b>注意</b>日本語は通じない（Googleの口コミでは日本語メニューがあるらしい）</p>
+      </div>
     </div>
   </div>
 
-  <div class="timeline-item timeline-item--feature">
+  <div id="tl-0425-1310" class="timeline-item timeline-item--feature" data-cat="meal" data-tags="ネギ餅|天津蔥抓餅|食べ歩き">
     <div class="timeline-time">13:10</div>
     <div class="timeline-card">
-      <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_130948.jpg');"></div>
-      <h3>永康街「天津蔥抓餅」、行列を見て一瞬引き返しかけた</h3>
-      <p>台北101駅から東門駅までMRTでワープして、永康街の人気店「天津蔥抓餅」へ。着いた瞬間、行列を見て「うわ、これ何分待つんだ」と心の中でそっと回れ右をしかけました。でも回転が異常に速く、気づいたら手元にネギ餅。人気店、伊達じゃないです。</p>
-      <p>テイクアウト専門で、卵入りやバジル入りなどメニューが豊富すぎて、注文より選ぶ時間の方が長かった説あります。ちなみに一番シンプルな原味は30元。この安さで、この満足感。永康街、歩くだけでお腹が空いてくる街でした。</p>
+      <div class="timeline-photos timeline-photos--3">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_130105.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_130205.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_130956.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--meal">食事</span>
+        <button type="button" class="hashtag" data-tag="ネギ餅">#ネギ餅</button>
+        <button type="button" class="hashtag" data-tag="天津蔥抓餅">#天津蔥抓餅</button>
+        <button type="button" class="hashtag" data-tag="食べ歩き">#食べ歩き</button>
+      </div>
+      <h3>行列でも回転が早い。食べ歩きの定番、ネギ餅</h3>
+      <div class="info-chips">
+        <span class="info-chip"><b>料金</b>30元（約150円）味付けなし</span>
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.0326689,121.5297056" target="_blank" rel="noopener"><b>地図</b>天津蔥抓餅</a>
+      </div>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Taiwan04/avatar-jojo-smile.svg" alt="">
+        <p class="voice-bubble">行列だったけど、回転が早くてすぐ受け取れた</p>
+      </div>
+      <p>台北101駅からMRTで東門駅へ移動して、天津蔥抓餅でネギ餅を食べました。お店の近くはとても活気があり、人も多いです。ネギ餅を買うのに行列ができていましたが、回転が早いので、すぐに受け取れました。</p>
+      <p>テイクアウトのみで、卵入りやバジル入りなど、メニューが豊富です。値段は、味付けなしで30元（約150円）。近くにドリンクスタンド（50嵐）もあるので、食べ歩きにぴったりの街です。</p>
+      <div class="notes">
+        <p class="note note--warn"><b>注意</b>行列ができるので、並ぶ時間が必要（回転は早い）</p>
+      </div>
     </div>
   </div>
 
-  <div class="timeline-item timeline-item--feature">
+  <div id="tl-0425-1530" class="timeline-item timeline-item--feature" data-cat="sight" data-tags="北投|ドクターフィッシュ|足湯">
     <div class="timeline-time">15:30</div>
     <div class="timeline-card">
-      <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_153222.jpg');"></div>
-      <h3>ドクターフィッシュ初体験、絶叫顔をカメラに残される</h3>
-      <p>東門駅からMRT赤線に乗って北投駅、そこから徒歩で観光地感ゼロの超ローカルな足湯へ。ドクターフィッシュは2階、1階の受付でお金を払うと謎の切符を渡され、それを持って2階へ上がるという地味に緊張するシステムでした。</p>
-      <p>人生初のドクターフィッシュ。感想はもうこの写真の顔がすべてを物語っていると思います。足を入れた瞬間、「うわ無理、くすぐったすぎる」と本気で叫びました。魚たちよ、遠慮という言葉を知らないのか。でも終わったあとの足はびっくりするほどつるつるすべすべで、これは病みつきになる人の気持ちがちょっとだけ分かってしまいました。</p>
+      <div class="timeline-photos timeline-photos--3">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_153110.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_153141.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_142044.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--sight">観光</span>
+        <button type="button" class="hashtag" data-tag="北投">#北投</button>
+        <button type="button" class="hashtag" data-tag="ドクターフィッシュ">#ドクターフィッシュ</button>
+        <button type="button" class="hashtag" data-tag="足湯">#足湯</button>
+      </div>
+      <h3>初めてのドクターフィッシュは、くすぐったくて、つるつる</h3>
+      <div class="info-chips">
+        <span class="info-chip"><b>料金</b>80元（約400円）</span>
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.133891,121.5010051" target="_blank" rel="noopener"><b>地図</b>北投青磺名湯</a>
+      </div>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Taiwan04/avatar-jojo-joy.svg" alt="">
+        <p class="voice-bubble">くすぐったいけど、すごくつるつるすべすべになった！</p>
+      </div>
+      <p>東門駅からMRTの赤い路線に乗って北投駅へ。そこから歩いて北投青磺名湯に着きました。観光地というより、地元の人が通うようなローカルな場所です。</p>
+      <p>ここで足湯に入り、初めてドクターフィッシュを体験しました。くすぐったいけど、終わるとすごくつるつる、すべすべになっていて感動しました。</p>
+      <div class="notes">
+        <p class="note note--warn"><b>注意</b>ドクターフィッシュは2階。1階の受付で声をかけて料金を払うと、切符のようなものがもらえるので、それを2階へ持っていく</p>
+      </div>
     </div>
   </div>
 
-  <div class="timeline-item timeline-item--feature">
+  <div id="tl-0425-1630" class="timeline-item timeline-item--feature" data-cat="sight" data-tags="地熱谷|温泉|散策">
     <div class="timeline-time">16:30</div>
     <div class="timeline-card">
-      <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_163953.jpg');"></div>
-      <h3>地熱谷、もうもうの湯気にただ突っ立っていた時間</h3>
-      <p>新北投駅から徒歩で地熱谷へ。あたり一面に立ちのぼる白い湯気、絶え間なく湧き出るお湯。特に何をするわけでもなく、ただぼーっと湯気を眺めているだけの時間だったんですが、なぜか誰も彼もここでスマホを構えて無言になります。異世界に迷い込んだような、ちょっとした異空間体験でした。</p>
+      <div class="timeline-photos timeline-photos--3">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_163519.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_164606.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_163953.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--sight">観光</span>
+        <button type="button" class="hashtag" data-tag="地熱谷">#地熱谷</button>
+        <button type="button" class="hashtag" data-tag="温泉">#温泉</button>
+        <button type="button" class="hashtag" data-tag="散策">#散策</button>
+      </div>
+      <h3>地熱谷で、もくもくの湯気と湧き出るお湯を見た</h3>
+      <div class="info-chips">
+        <span class="info-chip"><b>料金</b>無料</span>
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.1379481,121.5116771" target="_blank" rel="noopener"><b>地図</b>地熱谷</a>
+      </div>
+      <p>新北投駅から歩いて、地熱谷へ向かいました。湯気がもくもくと立ちのぼり、湧き出たお湯が川になって流れています。看板もあって、温泉の街に来たことを実感します。入るのは無料です。</p>
     </div>
   </div>
 
-  <div class="timeline-item timeline-item--feature">
+  <div id="tl-0425-1830" class="timeline-item timeline-item--feature" data-cat="meal move" data-tags="士林夜市|カキのオムレツ|ルーローファン|レンタルサイクル">
     <div class="timeline-time">18:30</div>
     <div class="timeline-card">
-      <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_183206.jpg');"></div>
-      <h3>士林夜市、レンタルサイクルという名のちいさな後悔</h3>
-      <p>新北投駅から電動レンタルサイクルに乗り換えて士林夜市へ。「MRT乗るより楽しそう」というノリで選んだんですが、正直に告白すると道中ずっと「これMRTでよかったんじゃないか」という疑念と戦っていました。料金は安いし快適なんですけどね、なんだろう、この敗北感は。</p>
-      <p>夜市に着けばそんな小さな後悔もどこへやら。カキ入りのオムレツとルーローファンにがっつき、夜市の地下にある屋内フードコートみたいな一角にも感動。人気店は案の定の大行列で、台湾の夜市は「並んでナンボ」という文化なんだと勝手に納得しました。</p>
+      <div class="timeline-photos timeline-photos--3">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_184917.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_183206.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_182953.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--meal">食事</span>
+        <span class="cat-tag cat-tag--move">移動</span>
+        <button type="button" class="hashtag" data-tag="士林夜市">#士林夜市</button>
+        <button type="button" class="hashtag" data-tag="カキのオムレツ">#カキのオムレツ</button>
+        <button type="button" class="hashtag" data-tag="ルーローファン">#ルーローファン</button>
+        <button type="button" class="hashtag" data-tag="レンタルサイクル">#レンタルサイクル</button>
+      </div>
+      <h3>夜市まで電動レンタルサイクル。カキ入りオムレツとルーローファン</h3>
+      <div class="info-chips">
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.087895,121.524414" target="_blank" rel="noopener"><b>地図</b>士林夜市（忠誠號蚵仔煎）</a>
+      </div>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Taiwan04/avatar-jojo-joy.svg" alt="">
+        <p class="voice-bubble">ご飯はおいしかったよ</p>
+      </div>
+      <p>夜ごはんは士林夜市へ。新北投駅から、レンタルサイクルに乗って向かいました。自転車は電動で、料金も安いです。ただ、MRTに乗れるなら、そちらのほうが楽だと思います。</p>
+      <p>夜市は混雑していて、人気店には行列ができます。食べたのは、カキの入ったオムレツとルーローファン。ご飯はおいしかったです。この夜市は、地下に屋内で食べられる場所もあります。フードコートのようなところです。</p>
+      <p>レンタルサイクルは、アプリを入れて登録すれば使えます。初回は保証金として、たしか2万円くらいが引かれますが、あとで返ってきます。</p>
+      <div class="notes">
+        <p class="note note--warn"><b>注意</b>夜市は混雑している。人気店は並ぶ</p>
+        <p class="note note--tip"><b>オススメ</b>地下に、屋内で食べられるフードコートのような場所がある</p>
+      </div>
     </div>
   </div>
 
-  <div class="timeline-item timeline-item--feature">
+  <div id="tl-0425-1950" class="timeline-item timeline-item--feature" data-cat="shop" data-tags="お土産|Mia C'bon|クラッカー|クッキー">
     <div class="timeline-time">19:50</div>
     <div class="timeline-card">
-      <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_194957.jpg');"></div>
-      <h3>Mia C'bon、店長のおすすめに人生を狂わされる</h3>
-      <p>台北車庫から地下街を抜けて「Mia C'bon 台北京站店」でお土産探し。品揃えの良さに油断していたら、店長おすすめのクラッカーとクッキーが完全に反則級のおいしさで、気づけばカゴがどんどん重くなっていました。200元のクラッカーが、なぜか3個も4個もカゴに入っていくんです。誰だ、僕の理性を奪ったのは。僕です。</p>
-      <p>他の店ではなかなか見かけない品で、正直いくらあっても持ち帰りたいレベル。スーツケースの容量と、荷物を持つ自分の腕力との、静かで熾烈な攻防戦でした。</p>
+      <div class="timeline-photos timeline-photos--3">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_195022.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_194955.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_211028.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--shop">買い物</span>
+        <button type="button" class="hashtag" data-tag="お土産">#お土産</button>
+        <button type="button" class="hashtag" data-tag="Mia C'bon">#Mia C'bon</button>
+        <button type="button" class="hashtag" data-tag="クラッカー">#クラッカー</button>
+        <button type="button" class="hashtag" data-tag="クッキー">#クッキー</button>
+      </div>
+      <h3>お土産は、台北駅の近くでうますぎるクラッカーとクッキー</h3>
+      <div class="info-chips">
+        <span class="info-chip"><b>料金</b>クラッカー 200元（約1,000円）</span>
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.0492399,121.51694" target="_blank" rel="noopener"><b>地図</b>Mia C'bon 台北京站店</a>
+      </div>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Taiwan04/avatar-jojo-joy.svg" alt="">
+        <p class="voice-bubble">クラッカーとクッキーが、うますぎる</p>
+      </div>
+      <p>夜は、台北駅の近くにあるMia C'bon 台北京站店でお土産選びです。台北車庫から地下街を通って、歩いて行きました。お菓子やビールなどを買いました。</p>
+      <p>このお店は、品揃えがとても良いです。特に、店長おすすめのクラッカーとクッキーが、うますぎます。ほかのお店ではなかなか見つけられなかったので、いくらあっても足りないくらい、持ち帰りたくなりました。</p>
+      <div class="notes">
+        <p class="note note--tip"><b>オススメ</b>クラッカーとクッキーは、店長のおすすめを</p>
+      </div>
     </div>
   </div>
 
-</div>
-
-<div class="chapter-marker"><span>DAY 3 — 4/26 TAICHUNG・SUN MOON LAKE</span></div>
-
-<div class="timeline">
-
-  <div class="timeline-item timeline-item--feature">
-    <div class="timeline-time">7:30</div>
-    <div class="timeline-card">
-      <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260426_073820.jpg');"></div>
-      <h3>back number聖地巡礼、なのに聖地を間違えるという事件</h3>
-      <p>朝早くから意気込んで向かったのは、なんの変哲もない路地。実はここ、back numberのMV「高嶺の花子さん」のサビに映る場所……のはずでした。同じ構図で写真を撮ろうと意気込んだ結果、見事に場所を間違え、気づけば一本違う路地でひとりシャッターを切っていました。</p>
-      <p>似ているようで似ていない、そんな「惜しい」一枚の完成です。聖地巡礼、思っていたより難易度が高い。地図アプリを過信した自分を、ここで反省しておきます。</p>
-    </div>
-  </div>
-
-  <div class="timeline-item timeline-item--feature">
-    <div class="timeline-time">11:00</div>
-    <div class="timeline-card">
-      <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260426_111612.jpg');"></div>
-      <h3>特急バスで台中へ、道中ずっと「新幹線でよくない?」</h3>
-      <p>電車を乗り継いで、特急で台北から台中バスステーションへ。移動自体は無事に終わったんですが、車内でふと「これ、新幹線の方が早かったんじゃないか」という疑念が頭をもたげ、そのまま台中に着くまで拭えませんでした。次に来ることがあれば、迷わず新幹線を選びます。学びです。</p>
-    </div>
-  </div>
-
-  <div class="timeline-item timeline-item--feature">
-    <div class="timeline-time">13:10</div>
-    <div class="timeline-card">
-      <div class="timeline-photo" style="background-image:url('../images/Taiwan04/20260426_130929.jpg');"></div>
-      <h3>日月潭、言葉より先に「うわ」しか出てこなかった</h3>
-      <p>バスに揺られてフェリー乗り場に到着し、切符を買った瞬間に飛び込んできたのがこの景色。山と湖のスケールが写真の何倍も大きくて、カメラを構えるより先に口から出たのは「うわ」のひとことでした。語彙力、どこに置いてきたんでしょうか僕は。</p>
-      <p>チケット売り場は観光客でごった返していて、チケット売りのおじいちゃんたちが何人も声を張り上げている謎の活気がありました。KLOOKで予約していたフェリーのチケット受取もこの場所。ちなみにトイレも近くにあるので、水分を取りすぎても安心です(大事な情報)。</p>
-    </div>
-  </div>
-
-  <div class="timeline-item timeline-item--feature">
-    <div class="timeline-time">14:35</div>
-    <div class="timeline-card">
-      <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260426_143546.jpg');"></div>
-      <h3>朝霧茶荘 Tea18、有名店なのに店の数が謎に少ない事件</h3>
-      <p>フェリーを降りて向かった「朝霧茶荘 Tea18」。有名店と聞いていたので、もっとお店がひしめく賑やかな通りを想像していたんですが、思ったより静かでこぢんまり。「あれ、有名店ってここだけ?」と少し不安になりましたが、アイスは期待をきっちり超えてきました。おいしいものに看板の派手さは関係ないんですね。</p>
-      <p>本当はここからロープウェイでさらに奥へ進む予定だったんですが、時間切れでタイムアップ。日月潭、また来る理由がひとつ増えました。</p>
-    </div>
-  </div>
-
-  <div class="timeline-item timeline-item--feature">
+  <div id="tl-0425-2100" class="timeline-item timeline-item--feature" data-cat="sight" data-tags="銅像|ホテル近く|夜">
     <div class="timeline-time">21:00</div>
     <div class="timeline-card">
-      <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260426_213403.jpg');"></div>
-      <h3>饒河街夜市、一番疲れているときに一番熱いものを食べる法則</h3>
-      <p>緑のMRTで松山駅まで移動し、饒河街夜市の名物「福州世祖胡椒餅」へ。この日は朝から動きっぱなしで、正直もう足が棒でした。そんな状態で選んだのが、なぜか熱々の胡椒餅。人間はどうして一番疲れているときに限って一番熱いものを食べたがるんでしょうか。哲学的な問いを抱えながら、口の中を軽く火傷しました。美味しかったので、まあ勝ちです。</p>
-      <p>夜市はとにかく人、人、人。歩くだけでも一苦労でしたが、それも含めての夜市体験だと思うことにしています。</p>
+      <div class="timeline-photos timeline-photos--3">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_210413.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_210426.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260425_235921.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--sight">観光</span>
+        <button type="button" class="hashtag" data-tag="銅像">#銅像</button>
+        <button type="button" class="hashtag" data-tag="ホテル近く">#ホテル近く</button>
+        <button type="button" class="hashtag" data-tag="夜">#夜</button>
+      </div>
+      <h3>夜は、ホテルの近くで金色の銅像を見た</h3>
+      <div class="info-chips">
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.0512766,121.5327817" target="_blank" rel="noopener"><b>地図</b>元大金星大樓（銅像）</a>
+      </div>
+      <p>この日の夜は、ホテルの近くにある金色の銅像を見に行きました。炎のような飾りをまとった、迫力のある像です。夜のライトアップに、金色がよく映えていました。</p>
     </div>
   </div>
 
 </div>
 
-<div class="chapter-marker"><span>DAY 4 — 4/27 TAIPEI</span></div>
+<div class="chapter-marker"><span>4/26 — TAICHUNG & SUN MOON LAKE</span></div>
 
 <div class="timeline">
 
-  <div class="timeline-item timeline-item--feature">
-    <div class="timeline-time">9:15</div>
+  <div id="tl-0426-0730" class="timeline-item timeline-item--feature" data-cat="sight" data-tags="ロケ地巡り|back number|高嶺の花子さん">
+    <div class="timeline-time">7:30</div>
     <div class="timeline-card">
-      <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260427_092247.jpg');"></div>
-      <h3>香溢飯糰、シャイなおじさんが握る台湾おにぎりに完敗</h3>
-      <p>松江南京駅から徒歩で「香溢飯糰」へ、旅の最後の朝ごはんです。正直、台湾おにぎりを少しなめていました。「おにぎりでしょ、まあそこそこでしょ」と。でも一口食べて、その場で反省しました。何回も台湾に来ておきながら、今回初めて食べたことが本気で悔やまれるおいしさです。</p>
-      <p>目の前で具材を詰めて握ってくれるおじさんは、終始シャイで目を合わせてくれません。でもその不器用な優しさがなんだか妙に心に残って、また会いに行きたいお店になりました。近くのドリンクスタンドのミルクティーもセットで頼んでおけば間違いなし。80元くらいで、この満足感。台湾、コスパの化け物です。</p>
+      <div class="timeline-photos">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260426_073820.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260426_073757.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--sight">観光</span>
+        <button type="button" class="hashtag" data-tag="ロケ地巡り">#ロケ地巡り</button>
+        <button type="button" class="hashtag" data-tag="back number">#back number</button>
+        <button type="button" class="hashtag" data-tag="高嶺の花子さん">#高嶺の花子さん</button>
+      </div>
+      <h3>back numberのMVのロケ地へ。でも、場所を間違えた</h3>
+      <div class="info-chips">
+        <span class="info-chip"><b>料金</b>無料</span>
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.0579536,121.5202844" target="_blank" rel="noopener"><b>地図</b>ロケ地周辺</a>
+      </div>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Taiwan04/avatar-jojo-smile.svg" alt="">
+        <p class="voice-bubble">ただの道。ここがback numberのMVのサビの場所</p>
+      </div>
+      <p>3日目は朝7:30から、ロケ地巡りです。back numberのMV「高嶺の花子さん」の、サビの部分が撮影された場所を見に行きました。見てのとおり、ただの道です。</p>
+      <p>MVと同じ写真を撮ろうとしたのですが、場所を間違えていて、別の路地から撮影していました。似た写真は撮れたものの、MVとまったく同じではありません。</p>
     </div>
   </div>
 
-  <div class="timeline-item timeline-item--feature">
+  <div id="tl-0426-1100" class="timeline-item timeline-item--feature" data-cat="move" data-tags="特急|台中|新幹線">
+    <div class="timeline-time">11:00</div>
+    <div class="timeline-card">
+      <div class="timeline-photos timeline-photos--3">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260426_111412.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260426_110834.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260426_105550.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--move">移動</span>
+        <button type="button" class="hashtag" data-tag="特急">#特急</button>
+        <button type="button" class="hashtag" data-tag="台中">#台中</button>
+        <button type="button" class="hashtag" data-tag="新幹線">#新幹線</button>
+      </div>
+      <h3>台北から台中へ、特急で。次は新幹線にしたい</h3>
+      <div class="info-chips">
+        <span class="info-chip"><b>料金</b>約500元（約2,500円）※調べた目安</span>
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=24.1420417,120.6855159" target="_blank" rel="noopener"><b>地図</b>台中のバス乗り場</a>
+      </div>
+      <p>この日は台北から台中へ移動しました。乗ったのは、在来線の特急です。料金は忘れてしまったので調べてみると、台鉄（台湾鉄道）の自強号で、台北から台中まで約500元（約2,500円）が目安のようです。2025年6月の値上げ後の料金です。</p>
+      <p>台中に着いたら、日月潭へ向かうバスのバス停へ。あとから思ったのは、特急ではなく新幹線のほうがよかった、ということです。</p>
+      <div class="notes">
+        <p class="note note--tip"><b>オススメ</b>台北から台中までは、特急より新幹線のほうが良い</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tl-0426-1310" class="timeline-item timeline-item--feature" data-cat="sight" data-tags="日月潭|フェリー|絶景">
+    <div class="timeline-time">13:10</div>
+    <div class="timeline-card">
+      <div class="timeline-photos timeline-photos--3">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260426_130937.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260426_131027.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260426_132629.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--sight">観光</span>
+        <button type="button" class="hashtag" data-tag="日月潭">#日月潭</button>
+        <button type="button" class="hashtag" data-tag="フェリー">#フェリー</button>
+        <button type="button" class="hashtag" data-tag="絶景">#絶景</button>
+      </div>
+      <h3>日月潭に到着。青空と湖が素晴らしくきれいだった</h3>
+      <div class="info-chips">
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=23.8645269,120.9117702" target="_blank" rel="noopener"><b>地図</b>水社碼頭</a>
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=23.8646595,120.9105282" target="_blank" rel="noopener"><b>地図</b>チケット受け取り場所</a>
+      </div>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Taiwan04/avatar-jojo-awe.svg" alt="">
+        <p class="voice-bubble">到着した湖の景色は、素晴らしくきれい</p>
+      </div>
+      <p>バスに乗って、日月潭の水社に到着しました。目の前に広がる湖の景色は、素晴らしくきれいです。青空と湖が美しすぎて、思わず自分もポーズを決めて写真を撮りました。</p>
+      <p>フェリーのチケットは、Klookで予約して、現地で受け取りました。受け取り場所は、湛岸沙蓮遊船という会社の窓口で、水社の乗り場の近くです。トイレも近くにあります。観光客は中国語を話す人が多く、チケットを売るおじいさんもたくさんいました。料金は忘れてしまいました。</p>
+      <div class="notes">
+        <p class="note note--tip"><b>オススメ</b>フェリーのチケットはKlookで予約済み。現地の窓口（湛岸沙蓮遊船）で受け取る。トイレも近い</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tl-0426-1435" class="timeline-item timeline-item--feature" data-cat="meal" data-tags="朝霧茶荘|アイス|ロープウェイ">
+    <div class="timeline-time">14:35</div>
+    <div class="timeline-card">
+      <div class="timeline-photos timeline-photos--3">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260426_143546.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260426_142033.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260426_144710.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--meal">食事</span>
+        <button type="button" class="hashtag" data-tag="朝霧茶荘">#朝霧茶荘</button>
+        <button type="button" class="hashtag" data-tag="アイス">#アイス</button>
+        <button type="button" class="hashtag" data-tag="ロープウェイ">#ロープウェイ</button>
+      </div>
+      <h3>フェリーを降りて、朝霧茶荘のアイスを食べた</h3>
+      <div class="info-chips">
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=23.8484955,120.9303818" target="_blank" rel="noopener"><b>地図</b>朝霧茶荘 Tea18</a>
+      </div>
+      <p>フェリーを降りて、歩いて朝霧茶荘 Tea18 へ。有名なお店のようで、アイスを食べました。ミルクティーもあるそうです。思っていたより、まわりにお店は多くありません。</p>
+      <p>本当は、ロープウェイに乗って先へ進めるのですが、時間がなくて断念しました。料金は忘れてしまいました。</p>
+    </div>
+  </div>
+
+  <div id="tl-0426-2100" class="timeline-item timeline-item--feature" data-cat="meal" data-tags="胡椒餅|饒河夜市|夜市">
+    <div class="timeline-time">21:00</div>
+    <div class="timeline-card">
+      <div class="timeline-photos">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260426_203055.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260426_203728.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--meal">食事</span>
+        <button type="button" class="hashtag" data-tag="胡椒餅">#胡椒餅</button>
+        <button type="button" class="hashtag" data-tag="饒河夜市">#饒河夜市</button>
+        <button type="button" class="hashtag" data-tag="夜市">#夜市</button>
+      </div>
+      <h3>夜は松山の夜市で、胡椒餅。熱いので注意</h3>
+      <div class="info-chips">
+        <span class="info-chip"><b>料金</b>胡椒餅 50元くらい（約250円）</span>
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.0509544,121.5773857" target="_blank" rel="noopener"><b>地図</b>福州世祖胡椒餅</a>
+      </div>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Taiwan04/avatar-jojo-smile.svg" alt="">
+        <p class="voice-bubble">夜市は人が多い。疲れた</p>
+      </div>
+      <p>台北に戻った夜は、緑のMRTで松山駅へ。饒河夜市で、福州世祖胡椒餅の胡椒餅を食べたり、ドリンクを飲んだり、いろいろなものを食べ歩きました。</p>
+      <p>夜市は人がとても多くて、さすがに疲れました。胡椒餅は熱いので、食べるときは気をつけてください。値段は、50元（約250円）くらいだったと思います（適当です）。</p>
+      <div class="notes">
+        <p class="note note--warn"><b>注意</b>胡椒餅はとても熱いので、食べるとき注意</p>
+        <p class="note note--warn"><b>注意</b>夜市は人が多い</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="chapter-marker"><span>4/27 — BACK TO JAPAN</span></div>
+
+<div class="timeline">
+
+  <div id="tl-0427-0915" class="timeline-item timeline-item--feature" data-cat="meal" data-tags="台湾おにぎり|香溢飯糰|ミルクティー">
+    <div class="timeline-time">9:15</div>
+    <div class="timeline-card">
+      <div class="timeline-photos timeline-photos--3">
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260427_091742.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260427_093723.jpg');"></div>
+        <div class="timeline-photo timeline-photo--portrait" style="background-image:url('../images/Taiwan04/20260427_105417.jpg');"></div>
+      </div>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--meal">食事</span>
+        <button type="button" class="hashtag" data-tag="台湾おにぎり">#台湾おにぎり</button>
+        <button type="button" class="hashtag" data-tag="香溢飯糰">#香溢飯糰</button>
+        <button type="button" class="hashtag" data-tag="ミルクティー">#ミルクティー</button>
+      </div>
+      <h3>最終日の朝は台湾おにぎり。なめたらあかん</h3>
+      <div class="info-chips">
+        <span class="info-chip"><b>料金</b>80元くらい（約400円）</span>
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.0518726,121.5303935" target="_blank" rel="noopener"><b>地図</b>香溢飯糰</a>
+        <a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.0512098,121.5348747" target="_blank" rel="noopener"><b>地図</b>KEBUKE（ドリンクスタンド）</a>
+      </div>
+      <div class="voice">
+        <img class="voice-avatar" src="../images/Taiwan04/avatar-jojo-joy.svg" alt="">
+        <p class="voice-bubble">想像以上においしい。台湾おにぎり、なめたらあかん</p>
+      </div>
+      <p>最終日の朝は、松江南京から歩いて香溢飯糰へ。台湾おにぎりと、ミルクティーを買いました。何回も台湾に来ていますが、これは食べるべき一品だと思いました。台湾おにぎりは、想像以上においしいです。</p>
+      <p>その場で具材を入れて、握ってくれます。お店のおじさんは、シャイで優しい人です。おにぎりがおいしいからまた行きたいのですが、おじさんのシャイなところを見に行きたい気持ちもあります。近くのドリンクスタンド（KEBUKE）も、おいしいのでおすすめです。</p>
+      <div class="notes">
+        <p class="note note--tip"><b>オススメ</b>おにぎりは、その場で具材を入れて握ってくれる。近くのドリンクスタンドもおいしい</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tl-0427-1130" class="timeline-item timeline-item--feature" data-cat="meal move" data-tags="空港ラウンジ|お弁当|帰国">
     <div class="timeline-time">11:30</div>
     <div class="timeline-card">
       <div class="timeline-photo" style="background-image:url('../images/Taiwan04/20260427_113803.jpg');"></div>
-      <h3>空港ラウンジ、弁当の中身は永遠の謎のまま帰国</h3>
-      <p>台北桃園空港のラウンジで、最後の休憩タイム。この日の食事はボックス入りの弁当スタイルでした。……と言いつつ、お腹が空きすぎていて開けた瞬間にフタも閉じずに食べ始めてしまい、中身の写真を撮り忘れるという、旅の締めくくりにふさわしすぎるオチがつきました。美味しかったことだけは全力で保証します。信じてください。</p>
-      <p>という感じで、4回目の台湾も無事に(?)終了。次はどこの街で「これ絶対おかしいだろ」って一人でツッコミを入れているのか、自分でも楽しみです。読んでくれてありがとうございました。また次の旅で。</p>
+      <div class="item-tags">
+        <span class="cat-tag cat-tag--meal">食事</span>
+        <span class="cat-tag cat-tag--move">移動</span>
+        <button type="button" class="hashtag" data-tag="空港ラウンジ">#空港ラウンジ</button>
+        <button type="button" class="hashtag" data-tag="お弁当">#お弁当</button>
+        <button type="button" class="hashtag" data-tag="帰国">#帰国</button>
+      </div>
+      <h3>空港ラウンジのご飯は、お弁当だった</h3>
+      <div class="info-chips">
+        <span class="info-chip"><b>料金</b>無料</span>
+      </div>
+      <p>帰りの飛行機の前に、台北桃園空港のラウンジで休憩しました。ここの食事は、お弁当でした。中身の写真が撮れていなくて、すみません。</p>
     </div>
   </div>
 
 </div>
 
-<section class="journey-summary">
+<section class="route-strip" aria-label="旅のルート">
+  <p class="route-strip-caption">ROUTE — TOKYO → TAIPEI → TAICHUNG → TAIPEI → TOKYO</p>
+  <ol class="route-strip-list">
+    <li><time>4/24</time><span>成田→台北</span></li>
+    <li><time>4/25</time><span>台北・北投</span></li>
+    <li><time>4/26</time><span>台中・日月潭</span></li>
+    <li><time>4/26</time><span>夜は台北へ</span></li>
+    <li><time>4/27</time><span>台北→成田</span></li>
+  </ol>
+</section>
+
+<section class="nmap" id="map" aria-label="旅の地図">
+  <p class="nmap-caption">MAP — 台北市内（番号は行った順）</p>
+  <div class="nmap-real" id="nmapCentral" data-map="central" hidden></div>
+  <script type="application/json" id="nmapData">{"central":{"lines":[{"t":"move","pts":[2,3]},{"t":"move","pts":[6,7]},{"t":"move","pts":[7,8]}],"tags":[],"pad":0.15},"beitou":{"lines":[{"t":"move","pts":[4,5]}],"tags":[],"pad":0.4},"taichung":{"lines":[{"t":"bus","pts":[1,2]},{"t":"ferry","pts":[2,3]}],"tags":[{"mid":[1,2],"text":"バス"},{"mid":[2,3],"text":"フェリー"}],"pad":0.2}}</script>
+  <div class="nmap-pinstore" hidden>
+    <a class="nmap-pin" data-map="central" data-key="1" data-lat="25.0550515" data-lng="121.5260049" href="#tl-0424-2220" aria-label="1. 京鼎楼"><span class="nmap-photo" style="background-image:url('../images/Taiwan04/map-taipei-1.jpg')"></span><span class="nmap-num">1</span><span class="nmap-name">京鼎楼</span></a>
+    <a class="nmap-pin" data-map="central" data-key="2" data-lat="25.036381" data-lng="121.5600247" href="#tl-0425-1100" aria-label="2. 周家豆腐捲"><span class="nmap-photo" style="background-image:url('../images/Taiwan04/map-taipei-2.jpg')"></span><span class="nmap-num">2</span><span class="nmap-name">周家豆腐捲</span></a>
+    <a class="nmap-pin" data-map="central" data-key="3" data-lat="25.0326689" data-lng="121.5297056" href="#tl-0425-1310" aria-label="3. 天津蔥抓餅"><span class="nmap-photo" style="background-image:url('../images/Taiwan04/map-taipei-3.jpg')"></span><span class="nmap-num">3</span><span class="nmap-name">天津蔥抓餅</span></a>
+    <a class="nmap-pin" data-map="central" data-key="6" data-lat="25.087895" data-lng="121.524414" href="#tl-0425-1830" aria-label="6. 士林夜市"><span class="nmap-photo" style="background-image:url('../images/Taiwan04/map-taipei-6.jpg')"></span><span class="nmap-num">6</span><span class="nmap-name">士林夜市</span></a>
+    <a class="nmap-pin" data-map="central" data-key="7" data-lat="25.0492399" data-lng="121.51694" href="#tl-0425-1950" aria-label="7. Mia C'bon"><span class="nmap-photo" style="background-image:url('../images/Taiwan04/map-taipei-7.jpg')"></span><span class="nmap-num">7</span><span class="nmap-name">Mia C'bon</span></a>
+    <a class="nmap-pin" data-map="central" data-key="8" data-lat="25.0512766" data-lng="121.5327817" href="#tl-0425-2100" aria-label="8. 金色の銅像"><span class="nmap-photo" style="background-image:url('../images/Taiwan04/map-statue.jpg')"></span><span class="nmap-num">8</span><span class="nmap-name">金色の銅像</span></a>
+    <a class="nmap-pin" data-map="central" data-key="9" data-lat="25.0579536" data-lng="121.5202844" href="#tl-0426-0730" aria-label="9. ロケ地"><span class="nmap-photo" style="background-image:url('../images/Taiwan04/map-taipei-8.jpg')"></span><span class="nmap-num">9</span><span class="nmap-name">ロケ地</span></a>
+    <a class="nmap-pin" data-map="central" data-key="10" data-lat="25.0509544" data-lng="121.5773857" href="#tl-0426-2100" aria-label="10. 福州世祖胡椒餅"><span class="nmap-photo" style="background-image:url('../images/Taiwan04/map-taipei-9.jpg')"></span><span class="nmap-num">10</span><span class="nmap-name">福州世祖胡椒餅</span></a>
+    <a class="nmap-pin" data-map="central" data-key="11" data-lat="25.0518726" data-lng="121.5303935" href="#tl-0427-0915" aria-label="11. 香溢飯糰"><span class="nmap-photo" style="background-image:url('../images/Taiwan04/map-taipei-10.jpg')"></span><span class="nmap-num">11</span><span class="nmap-name">香溢飯糰</span></a>
+    <a class="nmap-pin" data-map="beitou" data-key="4" data-lat="25.133891" data-lng="121.5010051" href="#tl-0425-1530" aria-label="4. 北投青磺名湯"><span class="nmap-photo" style="background-image:url('../images/Taiwan04/map-taipei-4.jpg')"></span><span class="nmap-num">4</span><span class="nmap-name">北投青磺名湯</span></a>
+    <a class="nmap-pin" data-map="beitou" data-key="5" data-lat="25.1379481" data-lng="121.5116771" href="#tl-0425-1630" aria-label="5. 地熱谷"><span class="nmap-photo" style="background-image:url('../images/Taiwan04/map-taipei-5.jpg')"></span><span class="nmap-num">5</span><span class="nmap-name">地熱谷</span></a>
+    <a class="nmap-pin" data-map="taichung" data-key="1" data-lat="24.1420417" data-lng="120.6855159" href="#tl-0426-1100" aria-label="1. 台中のバス乗り場"><span class="nmap-photo" style="background-image:url('../images/Taiwan04/map-taichung-1.jpg')"></span><span class="nmap-num">1</span><span class="nmap-name">台中のバス乗り場</span></a>
+    <a class="nmap-pin" data-map="taichung" data-key="2" data-lat="23.8645269" data-lng="120.9117702" href="#tl-0426-1310" aria-label="2. 日月潭（水社）"><span class="nmap-photo" style="background-image:url('../images/Taiwan04/map-taichung-2.jpg')"></span><span class="nmap-num">2</span><span class="nmap-name">日月潭（水社）</span></a>
+    <a class="nmap-pin" data-map="taichung" data-key="3" data-lat="23.8484955" data-lng="120.9303818" href="#tl-0426-1435" aria-label="3. 朝霧茶荘"><span class="nmap-photo" style="background-image:url('../images/Taiwan04/map-taichung-3.jpg')"></span><span class="nmap-num">3</span><span class="nmap-name">朝霧茶荘</span></a>
+  </div>
+  <ol class="nmap-steps">
+    <li style="counter-set: nmap 1"><b>京鼎楼</b><span>4/24</span></li>
+    <li style="counter-set: nmap 2"><b>周家豆腐捲</b><span>4/25</span></li>
+    <li style="counter-set: nmap 3"><b>天津蔥抓餅</b><span>4/25</span></li>
+    <li style="counter-set: nmap 6"><b>士林夜市</b><span>4/25</span></li>
+    <li style="counter-set: nmap 7"><b>Mia C'bon</b><span>4/25</span></li>
+    <li style="counter-set: nmap 8"><b>金色の銅像</b><span>4/25</span></li>
+    <li style="counter-set: nmap 9"><b>ロケ地</b><span>4/26</span></li>
+    <li style="counter-set: nmap 10"><b>福州世祖胡椒餅</b><span>4/26</span></li>
+    <li style="counter-set: nmap 11"><b>香溢飯糰</b><span>4/27</span></li>
+  </ol>
+  <p class="nmap-note">点線は、同じ日に行った順番を結んだ目安です（実際の道や路線ではありません）。写真を押すと、その時間の記事に移動します</p>
+
+  <p class="nmap-caption nmap-caption--second">MAP — 北投（4/25）</p>
+  <div class="nmap-real" id="nmapBeitou" data-map="beitou" hidden></div>
+  <ol class="nmap-steps">
+    <li style="counter-set: nmap 4"><b>北投青磺名湯</b><span>4/25</span></li>
+    <li style="counter-set: nmap 5"><b>地熱谷</b><span>4/25</span></li>
+  </ol>
+
+  <p class="nmap-caption nmap-caption--second">MAP — 台中と日月潭（4/26）</p>
+  <div class="nmap-real" id="nmapTaichung" data-map="taichung" hidden></div>
+  <ul class="nmap-key">
+    <li class="k-bus">バス</li><li class="k-ferry">フェリー</li>
+  </ul>
+  <ol class="nmap-steps">
+    <li style="counter-set: nmap 1"><b>台中のバス乗り場</b><span>4/26</span></li>
+    <li style="counter-set: nmap 2"><b>日月潭（水社）</b><span>4/26</span></li>
+    <li style="counter-set: nmap 3"><b>朝霧茶荘</b><span>4/26</span></li>
+  </ol>
+  <p class="nmap-note">線は、場所を結んだおおよその目安です。台中までは、台北から特急で移動しました</p>
+</section>
+
+<section class="journey-summary" id="journey">
   <div class="container">
     <div class="section-head">
-      <p class="section-eyebrow">THIS TRIP'S JOURNEY</p>
-      <h2>4日間の旅程を振り返る</h2>
+      <p class="section-eyebrow">TRIP SUMMARY</p>
+      <h2>この旅を振り返る</h2>
     </div>
     <div class="journey-list">
-      <div class="journey-row"><time>4/24<br>16:00</time><span>成田 → 台湾桃園（キャセイパシフィック航空）</span></div>
-      <div class="journey-row"><time>4/24<br>22:20</time><span>京鼎楼で小籠包・夜ごはん</span></div>
-      <div class="journey-row"><time>4/25<br>11:00</time><span>周家豆腐捲でビーフロール</span></div>
-      <div class="journey-row"><time>4/25<br>13:10</time><span>天津蔥抓餅でネギ餅</span></div>
-      <div class="journey-row"><time>4/25<br>15:30</time><span>北投青磺名湯でドクターフィッシュ</span></div>
-      <div class="journey-row"><time>4/25<br>16:30</time><span>地熱谷を散策</span></div>
-      <div class="journey-row"><time>4/25<br>18:30</time><span>士林夜市で夜ごはん</span></div>
-      <div class="journey-row"><time>4/25<br>19:50</time><span>Mia C'bonでお土産購入</span></div>
-      <div class="journey-row"><time>4/26<br>7:30</time><span>back numberのMVロケ地巡り</span></div>
-      <div class="journey-row"><time>4/26<br>11:00</time><span>特急バスで台北 → 台中</span></div>
-      <div class="journey-row"><time>4/26<br>13:10</time><span>日月潭を観光</span></div>
-      <div class="journey-row"><time>4/26<br>14:35</time><span>朝霧茶荘 Tea18でアイス</span></div>
-      <div class="journey-row"><time>4/26<br>21:00</time><span>饒河街夜市で胡椒餅</span></div>
-      <div class="journey-row"><time>4/27<br>9:15</time><span>香溢飯糰で台湾おにぎり・朝食</span></div>
-      <div class="journey-row"><time>4/27<br>11:30</time><span>空港ラウンジ、帰国の途へ</span></div>
+      <div class="journey-row"><time>4/24 16:00</time><span>成田から台北へ</span></div>
+      <div class="journey-row"><time>4/24 22:20</time><span>京鼎楼の小籠包</span></div>
+      <div class="journey-row"><time>4/25 11:00</time><span>ビーフロールと台北101</span></div>
+      <div class="journey-row"><time>4/25 13:10</time><span>ネギ餅</span></div>
+      <div class="journey-row"><time>4/25 15:30</time><span>ドクターフィッシュ</span></div>
+      <div class="journey-row"><time>4/25 16:30</time><span>地熱谷</span></div>
+      <div class="journey-row"><time>4/25 18:30</time><span>士林夜市</span></div>
+      <div class="journey-row"><time>4/25 19:50</time><span>お土産（Mia C'bon）</span></div>
+      <div class="journey-row"><time>4/25 21:00</time><span>ホテル近くの銅像</span></div>
+      <div class="journey-row"><time>4/26 7:30</time><span>back numberのロケ地</span></div>
+      <div class="journey-row"><time>4/26 11:00</time><span>台北から台中へ</span></div>
+      <div class="journey-row"><time>4/26 13:10</time><span>日月潭</span></div>
+      <div class="journey-row"><time>4/26 14:35</time><span>朝霧茶荘のアイス</span></div>
+      <div class="journey-row"><time>4/26 21:00</time><span>胡椒餅</span></div>
+      <div class="journey-row"><time>4/27 9:15</time><span>台湾おにぎり</span></div>
+      <div class="journey-row"><time>4/27 11:30</time><span>空港ラウンジ</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="trip-notes" id="info">
+  <div class="container">
+    <div class="section-head">
+      <p class="section-eyebrow">USEFUL INFO</p>
+      <h2>お役立ち情報まとめ</h2>
+    </div>
+    <div class="notes-board">
+
+      <article class="notes-card">
+        <h3>料金まとめ</h3>
+        <p class="rate-note">台湾元は、<b>1元＝約5円</b> で計算しています</p>
+        <ul class="cost-list">
+          <li><span class="cost-name">航空券（キャセイパシフィック）</span><span class="cost-value">1名 往復 42,700円</span></li>
+          <li><span class="cost-name">周家豆腐捲　ビーフロール</span><span class="cost-value">100元（約500円）</span></li>
+          <li><span class="cost-name">天津蔥抓餅　ネギ餅（味付けなし）</span><span class="cost-value">30元（約150円）</span></li>
+          <li><span class="cost-name">北投青磺名湯　ドクターフィッシュ</span><span class="cost-value">80元（約400円）</span></li>
+          <li><span class="cost-name">地熱谷</span><span class="cost-value">無料</span></li>
+          <li><span class="cost-name">Mia C'bon　クラッカー</span><span class="cost-value">200元（約1,000円）</span></li>
+          <li><span class="cost-name">台北→台中　在来線の特急</span><span class="cost-value">約500元（約2,500円）</span><span class="cost-memo">調べた目安（2025年6月の値上げ後）</span></li>
+          <li><span class="cost-name">福州世祖胡椒餅　胡椒餅</span><span class="cost-value">50元くらい（約250円）</span><span class="cost-memo">うろ覚えです</span></li>
+          <li><span class="cost-name">香溢飯糰　台湾おにぎり</span><span class="cost-value">80元くらい（約400円）</span><span class="cost-memo">うろ覚えです</span></li>
+          <li><span class="cost-name">空港ラウンジ</span><span class="cost-value">無料</span></li>
+        </ul>
+        <p class="notes-foot">金額はおおよその目安です。台中までの特急、日月潭のフェリー、朝霧茶荘のアイスなどの料金は、覚えていません。</p>
+      </article>
+
+      <article class="notes-card">
+        <h3>場所まとめ</h3>
+        <ul class="spot-list">
+          <li><span class="spot-time">4/24 22:20</span><span class="spot-name">京鼎楼</span><span class="cat-tag cat-tag--meal">食事</span><a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.0550515,121.5260049" target="_blank" rel="noopener"><b>地図</b>開く</a><span class="spot-addr">No. 47號, Changchun Rd, Zhongshan District, Taipei City</span></li>
+          <li><span class="spot-time">4/25 11:00</span><span class="spot-name">周家豆腐捲</span><span class="cat-tag cat-tag--meal">食事</span><a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.036381,121.5600247" target="_blank" rel="noopener"><b>地図</b>開く</a><span class="spot-addr">No. 106, Lane 419, Guangfu S Rd, Xinyi District, Taipei City</span></li>
+          <li><span class="spot-time">4/25 13:10</span><span class="spot-name">天津蔥抓餅</span><span class="cat-tag cat-tag--meal">食事</span><a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.0326689,121.5297056" target="_blank" rel="noopener"><b>地図</b>開く</a><span class="spot-addr">No. 1, Lane 6, Yongkang St, Da'an District, Taipei City</span></li>
+          <li><span class="spot-time">4/25 15:30</span><span class="spot-name">北投青磺名湯</span><span class="cat-tag cat-tag--sight">観光</span><a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.133891,121.5010051" target="_blank" rel="noopener"><b>地図</b>開く</a></li>
+          <li><span class="spot-time">4/25 16:30</span><span class="spot-name">地熱谷</span><span class="cat-tag cat-tag--sight">観光</span><a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.1379481,121.5116771" target="_blank" rel="noopener"><b>地図</b>開く</a></li>
+          <li><span class="spot-time">4/25 18:30</span><span class="spot-name">士林夜市（忠誠號蚵仔煎）</span><span class="cat-tag cat-tag--meal">食事</span><a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.087895,121.524414" target="_blank" rel="noopener"><b>地図</b>開く</a></li>
+          <li><span class="spot-time">4/25 19:50</span><span class="spot-name">Mia C'bon 台北京站店</span><span class="cat-tag cat-tag--shop">買い物</span><a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.0492399,121.51694" target="_blank" rel="noopener"><b>地図</b>開く</a><span class="spot-addr">Chengde Rd, Datong District, Taipei City（B3）</span></li>
+          <li><span class="spot-time">4/25 21:00</span><span class="spot-name">金色の銅像（元大金星大樓）</span><span class="cat-tag cat-tag--sight">観光</span><a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.0512766,121.5327817" target="_blank" rel="noopener"><b>地図</b>開く</a></li>
+          <li><span class="spot-time">4/26 7:30</span><span class="spot-name">ロケ地（back number MV）</span><span class="cat-tag cat-tag--sight">観光</span><a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.0579536,121.5202844" target="_blank" rel="noopener"><b>地図</b>開く</a><span class="spot-addr">No. 3, Lane 8, Wanquan St, Datong District, Taipei City</span></li>
+          <li><span class="spot-time">4/26 13:10</span><span class="spot-name">日月潭（水社碼頭）</span><span class="cat-tag cat-tag--sight">観光</span><a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=23.8645269,120.9117702" target="_blank" rel="noopener"><b>地図</b>開く</a><span class="spot-addr">No. 11, Mingsheng St, Yuchi Township, Nantou County</span></li>
+          <li><span class="spot-time">4/26 13:10</span><span class="spot-name">湛岸沙蓮遊船（フェリーのチケット受け取り）</span><span class="cat-tag cat-tag--move">移動</span><a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=23.8646595,120.9105282" target="_blank" rel="noopener"><b>地図</b>開く</a></li>
+          <li><span class="spot-time">4/26 14:35</span><span class="spot-name">朝霧茶荘 Tea18</span><span class="cat-tag cat-tag--meal">食事</span><a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=23.8484955,120.9303818" target="_blank" rel="noopener"><b>地図</b>開く</a><span class="spot-addr">No. 10-1, Dehua St, Yuchi Township, Nantou County</span></li>
+          <li><span class="spot-time">4/26 21:00</span><span class="spot-name">福州世祖胡椒餅（饒河夜市）</span><span class="cat-tag cat-tag--meal">食事</span><a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.0509544,121.5773857" target="_blank" rel="noopener"><b>地図</b>開く</a><span class="spot-addr">Raohe St, Songshan District, Taipei City</span></li>
+          <li><span class="spot-time">4/27 9:15</span><span class="spot-name">香溢飯糰</span><span class="cat-tag cat-tag--meal">食事</span><a class="info-chip info-chip--map" href="https://www.google.com/maps/search/?api=1&query=25.0518726,121.5303935" target="_blank" rel="noopener"><b>地図</b>開く</a><span class="spot-addr">No. 66, Section 2, Nanjing E Rd, Zhongshan District, Taipei City</span></li>
+        </ul>
+      </article>
+
+      <article class="notes-card">
+        <h3>お役立ち情報</h3>
+        <div class="tip-box tip-box--warn">
+          <h4>注意</h4>
+          <ul>
+            <li>周家豆腐捲は日本語が通じません（Googleの口コミでは日本語メニューがあるらしい）</li>
+            <li>夜市は人が多く、人気店は並びます</li>
+            <li>胡椒餅はとても熱いので、食べるときは注意</li>
+            <li>レンタルサイクルは、初回に保証金（たしか2万円くらい）がかかります。あとで返ってきます</li>
+            <li>北投のドクターフィッシュは2階です。1階の受付で料金を払い、切符のようなものをもらって2階へ</li>
+          </ul>
+        </div>
+        <div class="tip-box tip-box--tip">
+          <h4>オススメ</h4>
+          <ul>
+            <li>台北から台中へは、特急より新幹線のほうが良い</li>
+            <li>Mia C'bonのクラッカーとクッキーは、店長のおすすめを</li>
+            <li>台湾おにぎり（香溢飯糰）は、想像以上においしい。近くのドリンクスタンドもおすすめ</li>
+            <li>日月潭のフェリーは、Klookで事前に予約しておくと、受け取りが楽</li>
+            <li>ネギ餅は行列ができても、回転が早い</li>
+          </ul>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
@@ -258,13 +749,15 @@
       <a href="../index.html#contact">お問い合わせ</a>
     </div>
     <div class="footer-social">
-      <a href="#" aria-label="Instagram">Instagram</a>
-      <a href="#" aria-label="X">X</a>
-      <a href="#" aria-label="YouTube">YouTube</a>
+      <span class="footer-soon">SNS：準備中</span>
     </div>
   </div>
 </footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="../js/timeline-filter.js"></script>
+<script src="../js/route-map.js"></script>
+<script src="../js/lightbox.js"></script>
 <script src="../js/main.js"></script>
 </body>
 </html>

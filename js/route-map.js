@@ -1,83 +1,97 @@
 (function () {
   'use strict';
 
-  // Needs Leaflet; if it could not be loaded, the schematic map in the HTML stays visible.
-  var holder = document.getElementById('nmapReal');
-  var schematic = document.querySelector('.nmap-canvas');
-  if (!holder || !window.L) return;
+  // Needs Leaflet and a JSON config (#nmapData). If either is missing, the page keeps its fallback content.
+  var dataEl = document.getElementById('nmapData');
+  var holders = Array.prototype.slice.call(document.querySelectorAll('.nmap-real'));
+  if (!window.L || !dataEl || !holders.length) return;
 
-  var pins = Array.prototype.slice.call(document.querySelectorAll('.nmap-pin[data-lat]'));
-  if (!pins.length) return;
+  var CFG;
+  try { CFG = JSON.parse(dataEl.textContent); } catch (e) { return; }
 
   var isTouch = window.matchMedia('(pointer: coarse)').matches;
 
-  holder.hidden = false;
-  if (schematic) schematic.hidden = true;
+  // line styles by type
+  var STYLE = {
+    walk:  { color: '#c7622b', weight: 4, dashArray: '1 9' },
+    metro: { color: '#7a5cc0', weight: 5 },
+    funi:  { color: '#3f8a52', weight: 6 },
+    bus:   { color: '#3b6fb6', weight: 5, dashArray: '8 8' },
+    train: { color: '#d0494f', weight: 5, dashArray: '10 6' },
+    ferry: { color: '#1f93a8', weight: 5, dashArray: '2 9' },
+    move:  { color: '#8a8478', weight: 3, dashArray: '6 8' }
+  };
 
-  var map = L.map(holder, {
-    scrollWheelZoom: false,
-    dragging: !isTouch,
-    tap: false,
-    zoomSnap: 0.25,
-    attributionControl: true
-  });
+  holders.forEach(function (holder) {
+    var id = holder.dataset.map || 'main';
+    var cfg = CFG[id] || {};
+    var pins = Array.prototype.slice.call(document.querySelectorAll('.nmap-pin[data-lat]')).filter(function (a) {
+      return (a.dataset.map || 'main') === id;
+    });
+    if (!pins.length) return;
 
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
-  }).addTo(map);
+    var schematic = holder.parentNode.querySelector('.nmap-canvas');
+    holder.hidden = false;
+    if (schematic) schematic.hidden = true;
 
-  function pt(a) { return [parseFloat(a.dataset.lat), parseFloat(a.dataset.lng)]; }
-  var P = {};
-  pins.forEach(function (a) { P[a.dataset.key] = pt(a); });
+    var map = L.map(holder, {
+      scrollWheelZoom: false,
+      dragging: !isTouch,
+      tap: false,
+      zoomSnap: 0.25,
+      attributionControl: true
+    });
 
-  // Extra waypoints that are not photo pins
-  var MORGHEN = [40.8447, 14.2404];
-  // Line 2 from Montesanto runs north via Piazza Cavour before reaching Napoli Centrale (Piazza Garibaldi)
-  var CAVOUR = [40.8536, 14.2531];
-
-  function line(coords, cls, weight, dash) {
-    return L.polyline(coords, {
-      color: cls, weight: weight, opacity: 0.9, dashArray: dash || null, lineCap: 'round', lineJoin: 'round'
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
     }).addTo(map);
-  }
 
-  var ORANGE = '#c7622b', PURPLE = '#7a5cc0', GREEN = '#3f8a52';
+    var P = {};
+    pins.forEach(function (a) { P[a.dataset.key] = [parseFloat(a.dataset.lat), parseFloat(a.dataset.lng)]; });
 
-  // walking: shortest foot routes along real streets (computed with OSM foot routing; Da Michele -> Tribunali -> Santa Chiara -> bar -> Montesanto, Morghen -> castle -> Montesanto, station -> restaurant)
-  var WALK = {"w1":[[40.84977,14.26334],[40.84977,14.26334],[40.84979,14.26338],[40.85012,14.26311],[40.85009,14.26301],[40.85005,14.26288],[40.85003,14.26285],[40.85001,14.26278],[40.84999,14.26271],[40.84986,14.26228],[40.84972,14.2619],[40.84998,14.26175],[40.85048,14.26147],[40.85035,14.26108],[40.85028,14.26087],[40.85021,14.26065],[40.85009,14.26028],[40.85006,14.2603],[40.84991,14.25982],[40.8506,14.25942],[40.85112,14.25912],[40.85115,14.2591],[40.85122,14.25907],[40.85153,14.2589],[40.85151,14.25885],[40.85152,14.25885]],"w2":[[40.85152,14.25885],[40.85151,14.25885],[40.85139,14.2585],[40.85137,14.25852],[40.85129,14.25856],[40.85063,14.25894],[40.84977,14.25942],[40.84961,14.25893],[40.84953,14.25871],[40.8495,14.25861],[40.84938,14.25822],[40.84937,14.2582],[40.84924,14.2578],[40.84917,14.25759],[40.84911,14.25739],[40.84897,14.25699],[40.84883,14.25658],[40.84873,14.25627],[40.84869,14.25616],[40.84866,14.25607],[40.84855,14.25574],[40.84841,14.25533],[40.8484,14.25531],[40.84822,14.25475],[40.84807,14.25433],[40.84792,14.25388],[40.84764,14.25305],[40.84744,14.25244],[40.84741,14.25245],[40.84734,14.25249],[40.84725,14.25255],[40.84718,14.25261],[40.84721,14.25266]],"w3":[[40.84721,14.25266],[40.84718,14.25261],[40.84725,14.25255],[40.84734,14.25249],[40.84741,14.25245],[40.84744,14.25244],[40.84734,14.25214],[40.84727,14.25195],[40.84715,14.25202],[40.84706,14.25201],[40.84699,14.25193],[40.84694,14.25184],[40.84688,14.25169],[40.84686,14.25154],[40.84671,14.25145],[40.84669,14.25145],[40.84667,14.25144],[40.84625,14.25132],[40.84609,14.25127],[40.84566,14.25101],[40.84558,14.25095],[40.84549,14.25089],[40.84549,14.25084],[40.84544,14.25083],[40.84542,14.25083],[40.84534,14.25083],[40.84531,14.25085],[40.84522,14.25065],[40.84492,14.25032],[40.84504,14.25011]],"w4":[[40.84504,14.25011],[40.84506,14.25007],[40.84473,14.24973],[40.84476,14.2492],[40.84477,14.24913],[40.84463,14.24911],[40.84464,14.24908],[40.84464,14.249],[40.84464,14.24899]],"w5":[[40.84439,14.24005],[40.8444,14.24004],[40.84456,14.23976],[40.84488,14.2392],[40.84499,14.23893],[40.84505,14.23877],[40.845,14.23874],[40.84495,14.23871],[40.84488,14.23869],[40.84479,14.23871],[40.84474,14.23871],[40.84469,14.2388],[40.84453,14.23901]],"w6":[[40.84453,14.23901],[40.84469,14.2388],[40.84474,14.23871],[40.84479,14.23871],[40.84488,14.23869],[40.84495,14.23871],[40.845,14.23874],[40.84505,14.23877],[40.84499,14.23893],[40.84488,14.2392],[40.84456,14.23976],[40.8444,14.24004],[40.84431,14.24017],[40.84414,14.24044],[40.84419,14.24051],[40.84422,14.24054],[40.84428,14.24046],[40.8443,14.2405],[40.84424,14.24066],[40.844,14.24124],[40.84404,14.24127],[40.84411,14.24118],[40.84416,14.24117],[40.84448,14.24184],[40.84449,14.24211],[40.84452,14.24211],[40.84469,14.24206],[40.84493,14.24215],[40.84478,14.2423],[40.8448,14.24234],[40.84493,14.24231],[40.84511,14.2423],[40.84513,14.2423],[40.84514,14.24227],[40.84519,14.24227],[40.84517,14.24242],[40.84521,14.24243],[40.84524,14.24226],[40.84531,14.24227],[40.84525,14.24243],[40.84528,14.24245],[40.84536,14.2423],[40.84541,14.24233],[40.84534,14.24247],[40.84538,14.2425],[40.84545,14.24237],[40.84548,14.2424],[40.84542,14.24254],[40.84546,14.24256],[40.84552,14.24244],[40.8456,14.24245],[40.84563,14.24247],[40.84567,14.24268],[40.84567,14.24271],[40.84554,14.24278],[40.84555,14.24282],[40.8457,14.2428],[40.84589,14.24281],[40.84592,14.24293],[40.84589,14.24299],[40.84584,14.24307],[40.84579,14.24312],[40.84576,14.24316],[40.84578,14.24322],[40.84582,14.24335],[40.84578,14.24338],[40.8457,14.24344],[40.84564,14.24347],[40.8456,14.24349],[40.84558,14.24354],[40.84559,14.24357],[40.84559,14.24358],[40.84538,14.2437],[40.84539,14.24375],[40.8454,14.24381],[40.84539,14.24381],[40.84537,14.24384],[40.84534,14.24385],[40.84526,14.24389],[40.84507,14.24399],[40.84488,14.2441],[40.84479,14.24412],[40.84471,14.2441],[40.84459,14.24406],[40.84441,14.24399],[40.84436,14.24399],[40.84429,14.244],[40.84423,14.24407],[40.84419,14.24415],[40.84405,14.24441],[40.84396,14.2446],[40.84397,14.24461],[40.84397,14.24461],[40.84408,14.2444],[40.8441,14.24441],[40.844,14.24465],[40.84394,14.24485],[40.8439,14.24497],[40.84389,14.24502],[40.84386,14.24507],[40.84385,14.2451],[40.84382,14.24513],[40.84378,14.24522],[40.84383,14.24524],[40.84385,14.24526],[40.84388,14.24527],[40.84392,14.24531],[40.84395,14.24534],[40.844,14.2454],[40.84407,14.24549],[40.84409,14.24552],[40.84412,14.24556],[40.84418,14.2456],[40.84418,14.24564],[40.84419,14.24574],[40.84421,14.24607],[40.84428,14.24618],[40.84413,14.24635],[40.84436,14.24668],[40.84459,14.247],[40.84465,14.24708],[40.84478,14.24726],[40.84481,14.24731],[40.84459,14.24757],[40.84465,14.24771],[40.8448,14.24804],[40.84487,14.24818],[40.84488,14.2482],[40.84504,14.24853],[40.84505,14.24856],[40.84465,14.24888],[40.84464,14.24899]],"w7":[[40.85269,14.27163],[40.85258,14.27165],[40.85257,14.27165],[40.85257,14.27166],[40.85257,14.27168],[40.85252,14.27169],[40.85243,14.2717],[40.85222,14.27174],[40.85217,14.27175],[40.85216,14.27173],[40.85215,14.27167],[40.85213,14.27159],[40.85211,14.27155],[40.8521,14.27151],[40.85209,14.27146],[40.8521,14.27143],[40.85198,14.27152],[40.85188,14.27164],[40.85182,14.27109],[40.85176,14.27055]]};
-  Object.keys(WALK).forEach(function (k) { line(WALK[k], ORANGE, 4, '1 9'); });
-  // subway: station -> Duomo (next to Da Michele), Montesanto -> station
-  line([P[1], P[2]], PURPLE, 5);
-  line([P[6], CAVOUR, P[1]], PURPLE, 5);
-  L.circleMarker(CAVOUR, { radius: 5, color: PURPLE, weight: 3, fillColor: '#fff', fillOpacity: 1 }).addTo(map);
-  // funicular: Montesanto -> Morghen
-  line([P[6], MORGHEN], GREEN, 6);
+    // a point is either a pin number or [lat, lng]
+    function ll(p) { return typeof p === 'number' ? P[p] : p; }
 
-  pins.forEach(function (a) {
-    var wrap = document.createElement('div');
-    wrap.className = 'nmap-real-icon';
-    wrap.appendChild(a);
+    (cfg.lines || []).forEach(function (l) {
+      var s = STYLE[l.t] || STYLE.move;
+      L.polyline(l.pts.map(ll), {
+        color: s.color, weight: s.weight, opacity: 0.9, dashArray: s.dashArray || null, lineCap: 'round', lineJoin: 'round'
+      }).addTo(map);
+    });
+
+    (cfg.dots || []).forEach(function (d) {
+      var s = STYLE[d.t] || STYLE.move;
+      L.circleMarker(d.at, { radius: 5, color: s.color, weight: 3, fillColor: '#fff', fillOpacity: 1 }).addTo(map);
+    });
+
     var size = isTouch ? 36 : 42;
-    L.marker(pt(a), {
-      icon: L.divIcon({ html: wrap, className: 'nmap-real-marker', iconSize: [size, size], iconAnchor: [size / 2, size / 2] }),
-      keyboard: false,
-      riseOnHover: true
-    }).addTo(map);
+    pins.forEach(function (a) {
+      var wrap = document.createElement('div');
+      wrap.className = 'nmap-real-icon';
+      wrap.appendChild(a);
+      L.marker(P[a.dataset.key], {
+        icon: L.divIcon({ html: wrap, className: 'nmap-real-marker', iconSize: [size, size], iconAnchor: [size / 2, size / 2] }),
+        keyboard: false,
+        riseOnHover: true
+      }).addTo(map);
+    });
+
+    (cfg.tags || []).forEach(function (t) {
+      var at = t.at;
+      if (t.mid) {
+        var a = ll(t.mid[0]), b = ll(t.mid[1]);
+        at = [(a[0] + b[0]) / 2 + (t.dlat || 0), (a[1] + b[1]) / 2 + (t.dlng || 0)];
+      }
+      L.marker(at, {
+        interactive: false,
+        icon: L.divIcon({ html: '<span class="nmap-tag nmap-tag--real">' + t.text + '</span>', className: 'nmap-real-tag', iconSize: [0, 0] })
+      }).addTo(map);
+    });
+
+    map.fitBounds(L.latLngBounds(pins.map(function (a) { return P[a.dataset.key]; })).pad(cfg.pad || 0.1));
+
+    // Leaflet needs a size recalculation if the layout moved after load
+    window.addEventListener('load', function () { map.invalidateSize(); });
   });
-
-  function tag(latlng, text) {
-    L.marker(latlng, {
-      interactive: false,
-      icon: L.divIcon({ html: '<span class="nmap-tag nmap-tag--real">' + text + '</span>', className: 'nmap-real-tag', iconSize: [0, 0] })
-    }).addTo(map);
-  }
-  tag([(P[1][0] + P[2][0]) / 2, (P[1][1] + P[2][1]) / 2], '地下鉄1駅');
-  tag([CAVOUR[0] + 0.0011, CAVOUR[1] + 0.0042], '地下鉄（Piazza Cavour経由）');
-  tag([(P[6][0] + MORGHEN[0]) / 2 - 0.0006, (P[6][1] + MORGHEN[1]) / 2], 'ケーブルカー');
-
-  map.fitBounds(L.latLngBounds(pins.map(pt)).pad(0.1));
-
-  // Leaflet needs a size recalculation if the layout moved after load
-  window.addEventListener('load', function () { map.invalidateSize(); });
 })();

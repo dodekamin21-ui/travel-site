@@ -154,7 +154,7 @@ h1, h2, h3 {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('../images/2025-12-italy/cover/20251221_143336.jpg') center 30%/cover no-repeat;
+  background: url('../images/Taiwan04/20260426_130929.jpg') center 55%/cover no-repeat;
 }
 
 .hero-bg::after {
@@ -2062,4 +2062,82 @@ body.lightbox-open {
 
 .rate-note b {
   color: #a44e20;
+}
+
+/* Multi-day articles */
+.toc-day {
+  margin: 14px 0 4px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
+}
+
+.toc-list.toc-list--day {
+  grid-template-rows: none;
+  grid-auto-flow: row;
+}
+
+.nmap-pinstore {
+  display: none;
+}
+
+.nmap-caption--second {
+  margin-top: 40px;
+}
+
+.nmap-key .k-bus { --sw: #3b6fb6; }
+.nmap-key .k-bus::before { border-top-style: dashed; }
+.nmap-key .k-ferry { --sw: #1f93a8; }
+.nmap-key .k-ferry::before { border-top-style: dotted; }
+
+.nmap-steps span {
+  overflow-wrap: anywhere;
+}
+
+/* Under construction (sample areas on the top page) */
+.card-soon {
+  grid-column: span 3;
+  text-align: center;
+  background: repeating-linear-gradient(135deg, #fbf6ea, #fbf6ea 14px, #f6ecd5 14px, #f6ecd5 28px);
+  border: 2px dashed #e0c98e;
+  box-shadow: none;
+}
+
+.card-soon:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.card-soon .card-body {
+  align-items: center;
+}
+
+.region-card.is-soon {
+  opacity: 0.55;
+  cursor: default;
+  border-style: dashed;
+}
+
+.region-card.is-soon:hover {
+  border-color: var(--color-border);
+  transform: none;
+}
+
+.soon-note {
+  margin: 20px 0 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-soft);
+}
+
+.btn.is-disabled,
+.newsletter-form [disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.footer-soon {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
 }
