@@ -2187,3 +2187,72 @@ body.lightbox-open {
     font-size: 0.78rem;
   }
 }
+
+/* "More articles" block at the end of each article */
+.more-articles {
+  padding: 72px 0 24px;
+}
+
+.more-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 760px;
+  margin: 32px auto 0;
+}
+
+.more-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(43, 39, 35, 0.06);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.more-card:hover,
+.more-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(43, 39, 35, 0.12);
+}
+
+.more-media {
+  position: relative;
+  display: block;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.more-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px 20px 20px;
+}
+
+.more-date {
+  font-size: 0.78rem;
+  color: var(--color-text-soft);
+}
+
+.more-title {
+  font-family: var(--font-serif, "Shippori Mincho", serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.more-link {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: var(--color-accent-dark);
+}
+
+.more-top {
+  margin: 36px 0 0;
+  text-align: center;
+}
